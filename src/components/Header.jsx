@@ -1,0 +1,80 @@
+import { Phone, Mail, MapPin } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaTiktok,
+} from "react-icons/fa6";
+
+const Header = () => {
+  return (
+    <header className="bg-[#111111] text-gray-300 border-b border-gray-800">
+      <div className="max-w-7xl mx-auto h-10 px-4 lg:px-8 flex items-center justify-between">
+
+        {/* Left */}
+        <div className="flex items-center gap-4 lg:gap-6 text-xs lg:text-sm">
+
+          <div className="flex items-center gap-1.5">
+            <Phone size={14} className="text-orange-500" />
+            <span>+1 (800) 123-4567</span>
+          </div>
+
+          <div className="hidden md:flex items-center gap-1.5">
+            <Mail size={14} className="text-orange-500" />
+            <span>hello@sarabfood.com</span>
+          </div>
+
+          <div className="hidden lg:flex items-center gap-1.5">
+            <MapPin size={14} className="text-orange-500" />
+            <span>42 Flavor Street, NY</span>
+          </div>
+
+        </div>
+
+        {/* Right */}
+        <div className="flex items-center gap-3">
+
+          <span className="hidden sm:flex items-center bg-gradient-to-r from-red-600 to-orange-500 text-white text-[11px] font-semibold px-3 py-1 rounded-full whitespace-nowrap">
+            🚚 FREE DELIVERY TODAY!
+          </span>
+
+          <div className="flex items-center gap-2">
+
+            <a
+              href="#"
+              className="w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-[#222] hover:bg-orange-500 transition-all duration-300 flex items-center justify-center"
+            >
+              <FaFacebookF size={14} />
+            </a>
+
+            <a
+              href="#"
+              className="w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-[#222] hover:bg-orange-500 transition-all duration-300 flex items-center justify-center"
+            >
+              <FaInstagram size={14} />
+            </a>
+
+            <a
+              href="#"
+              className="w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-[#222] hover:bg-orange-500 transition-all duration-300 flex items-center justify-center"
+            >
+              <FaTiktok size={12} />
+            </a>
+
+            <a
+              href="#"
+              className="w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-[#222] hover:bg-orange-500 transition-all duration-300 flex items-center justify-center"
+            >
+              <FaYoutube size={14} />
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </header>
+  );
+};
+
+export default Header;
