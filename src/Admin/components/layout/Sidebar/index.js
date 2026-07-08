@@ -1,4 +1,5 @@
-export { default } from "./Sidebar";
+export { default as Sidebar } from "./Sidebar";
+export { default as MobileSidebar } from "./MobileSidebar";
 
 export { default as SidebarLogo } from "./SidebarLogo";
 export { default as SidebarItem } from "./SidebarItem";
