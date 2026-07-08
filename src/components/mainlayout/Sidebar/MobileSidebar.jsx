@@ -21,19 +21,28 @@ const MobileSidebar = ({ isOpen, setIsSidebarOpen }) => {
         className={`
           fixed top-0 left-0 z-50
           flex h-screen w-72 flex-col
-          bg-white shadow-xl
+         bg-[#2B120D] shadow-2xl
           transition-transform duration-300 lg:hidden
 
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
         {/* Top */}
-        <div className="flex items-center justify-between border-b border-slate-200">
-          <SidebarLogo />
+        <div className="flex items-center justify-between border-b border-[#4A241B]">
+          <SidebarLogo collapsed={false} />
 
           <button
             onClick={() => setIsSidebarOpen(false)}
-            className="mr-4 rounded-lg p-2 hover:bg-slate-100"
+            className="
+mr-4
+rounded-xl
+p-2
+text-orange-200
+hover:bg-orange-600
+hover:text-white
+transition-all
+duration-300
+"
           >
             <X size={22} />
           </button>
@@ -51,7 +60,7 @@ const MobileSidebar = ({ isOpen, setIsSidebarOpen }) => {
         </div>
 
         {/* Footer */}
-        <SidebarFooter />
+        <SidebarFooter collapsed={false} />
       </aside>
     </>
   );

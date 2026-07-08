@@ -16,10 +16,10 @@ const Sidebar = () => {
         sticky
         top-0
         h-screen
-        bg-white
+       bg-[#2B120D]
         border-r
-        border-slate-200
-        shadow-sm
+       border-[#4A241B]
+       shadow-2xl
         transition-all
         duration-300
         hidden
@@ -42,9 +42,10 @@ const Sidebar = () => {
             h-10
             w-10
             rounded-lg
-            hover:bg-orange-50
-            text-slate-600
-            hover:text-orange-500
+           text-orange-200
+         hover:bg-orange-600
+         hover:text-white
+          rounded-xl
             transition-all
             duration-300
           "

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { ChefHat } from "lucide-react";
 
 const SidebarLogo = ({ collapsed = false }) => {
   return (
@@ -8,29 +7,14 @@ const SidebarLogo = ({ collapsed = false }) => {
       className="
         flex items-center
         h-20
-        px-5
-        border-b
-        border-slate-200
-        bg-white
+       items-center border-b border-[#4A241B] px-5 py-6
         transition-all
         duration-300
       "
     >
       {/* Logo */}
-      <div
-        className="
-          flex
-          items-center
-          justify-center
-          w-12
-          h-12
-          rounded-xl
-          bg-orange-500
-          shadow-md
-          flex-shrink-0
-        "
-      >
-        <ChefHat size={24} className="text-white" />
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-600 text-white">
+        🍴
       </div>
 
       {/* Logo Text */}
@@ -43,11 +27,9 @@ const SidebarLogo = ({ collapsed = false }) => {
           ${collapsed ? "w-0 opacity-0" : "w-auto opacity-100"}
         `}
       >
-        <h1 className="text-xl font-bold text-slate-800 leading-none">
-          Sarab
-        </h1>
+        <h1 className="text-xl font-bold text-white leading-none">Sarab</h1>
 
-        <p className="text-xs text-slate-500 mt-1 whitespace-nowrap">
+        <p className="text-xs text-orange-200 mt-1 whitespace-nowrap">
           Restaurant Management
         </p>
       </div>

@@ -15,13 +15,15 @@ const SidebarItem = ({ icon: Icon, title, path, collapsed = false }) => {
         px-4
         py-3
         transition-all
-        duration-300
+duration-300
+ease-in-out
+hover:translate-x-1
         overflow-hidden
 
         ${
           isActive
-            ? "bg-orange-500 text-white shadow-md"
-            : "text-slate-600 hover:bg-orange-50 hover:text-orange-500"
+            ? "bg-orange-600 text-white shadow-lg"
+            : "text-orange-100 hover:bg-[#4A241B] hover:text-white"
         }
         `
       }
@@ -38,7 +40,7 @@ const SidebarItem = ({ icon: Icon, title, path, collapsed = false }) => {
               ${
                 isActive
                   ? "text-white"
-                  : "text-slate-500 group-hover:text-orange-500"
+                  : "text-orange-300 group-hover:text-white"
               }
             `}
           />

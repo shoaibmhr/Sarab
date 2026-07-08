@@ -7,13 +7,13 @@ const SidebarSection = ({ title, items, collapsed = false }) => {
       {!collapsed && (
         <h3
           className="
-            px-4
-            mb-3
-            text-xs
-            font-semibold
-            uppercase
-            tracking-wider
-            text-slate-400
+           text-xs
+font-semibold
+uppercase
+tracking-widest
+text-orange-300
+mb-3
+px-2
           "
         >
           {title}
