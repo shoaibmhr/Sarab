@@ -7,6 +7,11 @@ import Category from "../components/Category"
 import About from "../components/About"
 import Menu from "../components/Menu"
 import Sale from "../components/Sale"
+import Gallery from "../components/Gallery"
+import History from "../components/History"
+import Team from "../components/Team";
+import Order from "../components/Order";
+import Feedback from "../components/Feedback";
 
 function Home() {
   return (
@@ -19,6 +24,11 @@ function Home() {
       <About/>
       <Menu />
       <Sale />
+      <Gallery/>
+      <History />
+      <Team/>
+      <Order/>
+      <Feedback/>
     </>
 
   );

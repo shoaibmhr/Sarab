@@ -19,7 +19,9 @@
   font-family: "Playfair Display", serif;
 }
 
-/* .font-play */
+.font-play{
+  font-family: "Dancing Script", cursive;
+}
 
 
 @keyframes marquee {
