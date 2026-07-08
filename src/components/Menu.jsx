@@ -122,6 +122,7 @@ const Menu = () => {
             </span>
 
           </h2>
+          <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
 
 
 
