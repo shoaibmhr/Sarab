@@ -1,6 +1,6 @@
 import React from "react";
 
-// Images
+
 import Burger from "../assets/image/banner-img.jpg";
 import Pizza from "../assets/image/pizza.jpg";
 import Chicken from "../assets/image/4.jpg";
@@ -94,7 +94,7 @@ const Category = () => {
                   <img
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    className="w-auto h-auto object-cover group-hover:scale-110 transition duration-500"
                   />
                 </div>
               </div>
