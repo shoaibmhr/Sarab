@@ -27,7 +27,7 @@ const Category = () => {
       title: "Pizza",
       items: "18 items",
       image: Pizza,
-      active: true,
+      active: false,
     },
     {
       id: 4,

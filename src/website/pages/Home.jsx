@@ -9,6 +9,13 @@ import History from "../components/History";
 import Team from "../components/Team";
 import Order from "../components/Order";
 import Feedback from "../components/Feedback";
+import Reservation from "../components/Reservation";
+import Blog from "../components/Blog";
+import NewsLetter from "../components/NewsLetter";
+
+import Contact from "../components/Contact";
+
+
 
 const Home = () => {
   return (
@@ -24,6 +31,12 @@ const Home = () => {
       <Team />
       <Order />
       <Feedback />
+      <Reservation />
+      <Blog/>
+      <NewsLetter/>
+      <Contact/>
+
+
     </>
   );
 };

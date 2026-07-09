@@ -3,6 +3,8 @@ import  { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
+import { FaUtensils } from "react-icons/fa";
+
 import Burger from "../../assets/image/banner-img.jpg";
 import Pizza from "../../assets/image/pizza.jpg";
 import Chicken from "../../assets/image/4.jpg";
@@ -381,32 +383,12 @@ const Menu = () => {
         {/* Button */}
 
 
-        <div className="flex justify-center mt-14">
-
-
-          <button
-          className="
-          bg-[#ef4423]
-          hover:bg-red-700
-          text-white
-          px-10
-          py-4
-          rounded-full
-          font-semibold
-          shadow-xl
-          transition-all
-          duration-300
-          hover:scale-105
-          "
-          >
-
-            View Full Menu
-
-          </button>
-
-
-        </div>
-
+       <div className="mt-10 flex justify-center">
+              <button className="flex bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl items-center gap-3 font-semibold">
+                 <FaUtensils /> View Full Menu
+              </button>
+             
+            </div>
 
 
       </div>

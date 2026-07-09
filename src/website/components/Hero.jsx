@@ -2,6 +2,8 @@
 import { ArrowRight, Play } from "lucide-react";
 import Burger from "../../assets/image/banner-img.jpg";
 
+import {  FaHamburger, FaFire, FaMotorcycle, FaStar } from "react-icons/fa";
+
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-[#fdf7ef]">
@@ -13,11 +15,12 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* ================= LEFT ================= */}
 
-          <div className="relative z-10">
+          <div className="relative z-10 text-center lg:text-left
+          ">
             {/* Badge */}
 
             <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-md mb-7">
-              <span className="text-orange-500 text-lg">🍔</span>
+              <span className="text-orange-500 text-lg"><FaHamburger className="text-1xl text-[#ef4423]" /></span>
 
               <p className="text-xs font-semibold text-gray-700">
                 #1 Rated Fast Food Restaurant in New York
@@ -46,7 +49,7 @@ const Hero = () => {
 
             {/* Buttons */}
 
-            <div className="flex flex-wrap gap-4 mt-10">
+            <div className="flex flex-wrap gap-4 mt-10 ">
               <button className="bg-[#ef4423] hover:bg-[#db3a1c] transition duration-300 text-white px-8 py-4 rounded-xl flex items-center gap-3 font-semibold shadow-lg">
                 Explore Menu
                 <ArrowRight size={18} />
@@ -128,7 +131,7 @@ const Hero = () => {
 
             <div className="absolute left-0 top-24 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600">
-                🔥
+                <FaFire className="text-1xl text-[#ef4423]" />
               </div>
 
               <div>
@@ -142,7 +145,7 @@ const Hero = () => {
 
             <div className="absolute right-0 top-44 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                🛵
+                <FaMotorcycle className="text-1xl text-[#ef4423]" />
               </div>
 
               <div>
@@ -156,7 +159,7 @@ const Hero = () => {
 
             <div className="absolute right-2 bottom-24 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
-                ⭐
+                <FaStar className="text-1xl text-[#f7a321]" />
               </div>
 
               <div>

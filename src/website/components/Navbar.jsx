@@ -6,6 +6,9 @@ import {
   X,
 } from "lucide-react";
 
+
+import { FaUtensils } from "react-icons/fa";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -28,7 +31,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
 
             <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white text-2xl">
-              🍴
+             <FaUtensils />
             </div>
 
             <div>

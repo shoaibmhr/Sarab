@@ -3,6 +3,8 @@ import { Leaf, Award, Truck } from "lucide-react";
 import MainImage from "../../assets/image/banner-img.jpg";
 import SmallImage from "../../assets/image/banner-img.jpg";
 
+import { FaUtensils } from "react-icons/fa";
+
 const About = () => {
   const features = [
     {
@@ -121,7 +123,7 @@ const About = () => {
 
             <div className="mt-10">
               <button className="bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl flex items-center gap-3 font-semibold">
-                🍽️ View Full Menu
+                 <FaUtensils /> View Full Menu
               </button>
              
             </div>
