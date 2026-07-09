@@ -1,8 +1,8 @@
-import React from "react";
-import chef1 from "../assets/image/1.jpg";
-import chef2 from "../assets/image/2.jpg";
-import chef3 from "../assets/image/3.jpg";
-import chef7 from "../assets/image/7.jpg";
+
+import chef1 from "../../assets/image/1.jpg";
+import chef2 from "../../assets/image/2.jpg";
+import chef3 from "../../assets/image/3.jpg";
+import chef7 from "../../assets/image/7.jpg";
 
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
 

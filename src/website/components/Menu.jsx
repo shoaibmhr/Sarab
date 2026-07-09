@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-import Burger from "../assets/image/banner-img.jpg";
-import Pizza from "../assets/image/pizza.jpg";
-import Chicken from "../assets/image/4.jpg";
-import Wraps from "../assets/image/5.jpg";
-import Dessert from "../assets/image/6.jpg";
+import Burger from "../../assets/image/banner-img.jpg";
+import Pizza from "../../assets/image/pizza.jpg";
+import Chicken from "../../assets/image/4.jpg";
+import Wraps from "../../assets/image/5.jpg";
+import Dessert from "../../assets/image/6.jpg";
 
 const Menu = () => {
 

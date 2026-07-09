@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Burger from "../assets/image/banner-img.jpg";
+import  { useEffect, useState } from "react";
+import Burger from "../../assets/image/banner-img.jpg";
 const SaleBanner = () => {
 
   const [timeLeft, setTimeLeft] = useState({

@@ -1,6 +1,5 @@
-import React from "react";
 
-
+// Images
 import Burger from "../assets/image/banner-img.jpg";
 import Pizza from "../assets/image/pizza.jpg";
 import Chicken from "../assets/image/4.jpg";
