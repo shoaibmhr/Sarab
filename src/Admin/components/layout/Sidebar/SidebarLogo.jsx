@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaUtensils } from "react-icons/fa";
 
 const SidebarLogo = ({ collapsed = false }) => {
   return (
@@ -14,7 +15,7 @@ const SidebarLogo = ({ collapsed = false }) => {
     >
       {/* Logo */}
       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-600 text-white">
-        🍴
+        <FaUtensils />
       </div>
 
       {/* Logo Text */}
