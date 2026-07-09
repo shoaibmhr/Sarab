@@ -1,7 +1,7 @@
 import { Leaf, Award, Truck } from "lucide-react";
 
-import MainImage from "../assets/image/banner-img.jpg";
-import SmallImage from "../assets/image/banner-img.jpg";
+import MainImage from "../../assets/image/banner-img.jpg";
+import SmallImage from "../../assets/image/banner-img.jpg";
 
 const About = () => {
   const features = [
