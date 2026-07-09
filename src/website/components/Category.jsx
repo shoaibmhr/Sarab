@@ -1,11 +1,10 @@
-import React from "react";
 
 // Images
-import Burger from "../assets/image/banner-img.jpg";
-import Pizza from "../assets/image/pizza.jpg";
-import Chicken from "../assets/image/4.jpg";
-import Wrap from "../assets/image/5.jpg";
-import Dessert from "../assets/image/6.jpg";
+import Burger from "../../assets/image/banner-img.jpg";
+import Pizza from "../../assets/image/pizza.jpg";
+import Chicken from "../../assets/image/4.jpg";
+import Wrap from "../../assets/image/5.jpg";
+import Dessert from "../../assets/image/6.jpg";
 
 const Category = () => {
   const categories = [

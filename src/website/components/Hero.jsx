@@ -1,6 +1,6 @@
-import React from "react";
+
 import { ArrowRight, Play } from "lucide-react";
-import Burger from "../assets/image/banner-img.jpg";
+import Burger from "../../assets/image/banner-img.jpg";
 
 const Hero = () => {
   return (

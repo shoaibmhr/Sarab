@@ -1,9 +1,9 @@
-import React from "react";
-import banner from "../assets/image/banner-img.jpg";
-import pizza from "../assets/image/pizza.jpg";
-import burger from "../assets/image/4.jpg";
-import wrap from "../assets/image/5.jpg";
-import desert from "../assets/image/6.jpg";
+
+import banner from "../../assets/image/banner-img.jpg";
+import pizza from "../../assets/image/pizza.jpg";
+import burger from "../../assets/image/4.jpg";
+import wrap from "../../assets/image/5.jpg";
+import desert from "../../assets/image/6.jpg";
 
 const categories = [
   {
