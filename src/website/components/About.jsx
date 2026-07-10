@@ -33,7 +33,7 @@ const About = () => {
   ];
 
   return (
-    <section className="bg-white py-10">
+    <section id="about" className="bg-white py-10">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* ================= LEFT ================= */}
@@ -70,64 +70,63 @@ const About = () => {
 
           {/* ================= RIGHT ================= */}
 
-          <div>
-            <h5 className="text-[#ef4423] font-play text-2xl mb-2">Our Story</h5>
+         <div className="text-center lg:text-left">
+  <h5 className="text-[#ef4423] font-play text-2xl mb-2">
+    Our Story
+  </h5>
 
-            <h2 className="text-4xl lg:text-4xl font-playfair font-black">
-              We Invite You to Visit
-              <br />
-              Our <span className="text-[#ef4423]">Food Restaurant</span>
-            </h2>
+  <h2 className="text-4xl lg:text-4xl font-playfair font-black leading-tight">
+    We Invite You to Visit
+    <br />
+    Our <span className="text-[#ef4423]">Food Restaurant</span>
+  </h2>
 
-            <div className="w-16 h-1 bg-orange-400 rounded-full mt-5 mb-4"></div>
+  {/* Underline */}
+  <div className="w-16 h-1 bg-orange-400 rounded-full mt-5 mb-6 mx-auto lg:mx-0"></div>
 
-            <p className="text-gray-500 leading-8">
-              Founded in 2012, Sarab began as a small corner joint with a big
-              dream — to serve food that brings people together. Today we're
-              proud to serve thousands of happy customers every week with the
-              same passion that started it all.
-            </p>
+  <p className="text-gray-500 leading-8 max-w-xl mx-auto lg:mx-0">
+    Founded in 2012, Sarab began as a small corner joint with a big dream —
+    to serve food that brings people together. Today we're proud to serve
+    thousands of happy customers every week with the same passion that
+    started it all.
+  </p>
 
-            {/* Features */}
+  {/* Features */}
+  <div className="mt-10 space-y-6">
+    {features.map((feature) => (
+      <div
+        key={feature.id}
+        className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-4 rounded-2xl hover:bg-gray-50 p-4 transition duration-300"
+      >
+        {/* Icon */}
+        <div
+          className={`w-12 h-12 rounded-xl flex items-center justify-center ${feature.color}`}
+        >
+          {feature.icon}
+        </div>
 
-            <div className="mt-10 space-y-5">
-              {features.map((feature) => (
-                <div
-                  key={feature.id}
-                  className="flex items-start gap-4  rounded-2xl hover:bg-gray-50 transition duration-300"
-                >
-                  {/* Icon */}
+        {/* Content */}
+        <div className="flex-1">
+          <h3 className="text-lg font-bold text-gray-800">
+            {feature.title}
+          </h3>
 
-                  <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center ${feature.color}`}
-                  >
-                    {feature.icon}
-                  </div>
+          <p className="text-gray-500 mt-1 leading-7">
+            {feature.desc}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
 
-                  {/* Content */}
-
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-800">
-                      {feature.title}
-                    </h3>
-
-                    <p className="text-gray-500 mt-1 leading-7">
-                      {feature.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Button */}
-
-            <div className="mt-10">
-              <button className="bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl flex items-center gap-3 font-semibold">
-                 <FaUtensils /> View Full Menu
-              </button>
-             
-            </div>
-          </div>
+  {/* Button */}
+  <div className="mt-10 flex justify-center lg:justify-start">
+    <button className="bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl flex items-center gap-3 font-semibold">
+      <FaUtensils />
+      View Full Menu
+    </button>
+  </div>
+</div>
         </div>
       </div>
     </section>

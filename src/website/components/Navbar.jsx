@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  Search,
-  ShoppingBag,
-  Menu,
-  X,
-} from "lucide-react";
-
+import { Search, ShoppingBag, Menu, X } from "lucide-react";
 
 import { FaUtensils } from "react-icons/fa";
 
@@ -13,25 +7,31 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const navLinks = [
-    "Home",
-    "About",
-    "Menu",
-    "Chefs",
-    "Reservation",
-    "Reviews",
-    "Contact",
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Menu", id: "menu" },
+    { name: "Reservation", id: "reservation" },
+    { name: "Blog", id: "blog" },
+    { name: "Contact", id: "contact" },
   ];
+  // const navLinks = [
+  //   "Home",
+  //   "About",
+  //   "Menu",
+  //   "Chefs",
+  //   "Reservation",
+  //   "Reviews",
+  //   "Contact",
+  // ];
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
         <div className="flex items-center justify-between h-24">
-
           {/* Logo */}
           <div className="flex items-center gap-3">
-
             <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white text-2xl">
-             <FaUtensils />
+              <FaUtensils />
             </div>
 
             <div>
@@ -49,60 +49,42 @@ const Navbar = () => {
           {/* Desktop Menu */}
 
           <ul className="hidden lg:flex items-center gap-10 font-medium text-gray-700">
-
             {navLinks.map((item) => (
-              <li key={item} className="relative group cursor-pointer">
-
+              <li key={item.id} className="relative group cursor-pointer">
                 <a
-                  href="#"
+                  href={`#${item.id}`}
                   className={`${
-                    item === "Home"
+                    item.name === "Home"
                       ? "text-black font-semibold"
                       : "hover:text-red-600"
                   }`}
                 >
-                  {item}
+                  {item.name}
                 </a>
 
                 <span
-                  className={`absolute left-0 -bottom-8 h-[3px] bg-red-600 rounded-full transition-all duration-300
-                  ${
-                    item === "Home"
-                      ? "w-full"
-                      : "w-0 group-hover:w-full"
+                  className={`absolute left-0 -bottom-8 h-[3px] bg-red-600 rounded-full transition-all duration-300 ${
+                    item.name === "Home" ? "w-full" : "w-0 group-hover:w-full"
                   }`}
-                ></span>
-
+                />
               </li>
             ))}
-
           </ul>
 
           {/* Right */}
 
           <div className="hidden lg:flex items-center gap-6">
-
-            <Search
-              className="cursor-pointer hover:text-red-600"
-              size={22}
-            />
+            <Search className="cursor-pointer hover:text-red-600" size={22} />
 
             <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold px-7 py-3 rounded-xl shadow-lg hover:scale-105 duration-300 flex items-center gap-2">
-
               <ShoppingBag size={18} />
-
               Order Now
-
             </button>
-
           </div>
 
           {/* Mobile Button */}
 
-          <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden"
-          >
+          <button onClick={() => setOpen(!open)} className="lg:hidden">
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -115,34 +97,30 @@ const Navbar = () => {
           }`}
         >
           <ul className="flex flex-col gap-5 font-medium">
+  {navLinks.map((item) => (
+    <li key={item.id}>
+      <a
+        href={`#${item.id}`}
+        className={`block ${
+          item.name === "Home"
+            ? "text-red-600 border-l-4 border-red-600 pl-3"
+            : "text-gray-700 hover:text-red-600"
+        }`}
+      >
+        {item.name}
+      </a>
+    </li>
+  ))}
 
-            {navLinks.map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
-                  className={`block ${
-                    item === "Home"
-                      ? "text-red-600 border-l-4 border-red-600 pl-3"
-                      : "text-gray-700"
-                  }`}
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
+  <div className="flex items-center gap-5 pt-3">
+    <Search />
 
-            <div className="flex items-center gap-5 pt-3">
-
-              <Search />
-
-              <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-xl flex items-center gap-2">
-                <ShoppingBag size={18} />
-                Order Now
-              </button>
-
-            </div>
-
-          </ul>
+    <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-xl flex items-center gap-2">
+      <ShoppingBag size={18} />
+      Order Now
+    </button>
+  </div>
+</ul>
         </div>
       </div>
     </nav>

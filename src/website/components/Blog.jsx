@@ -36,7 +36,7 @@ const Blog = () => {
   ];
 
   return (
-    <section className="bg-[#fdf8f2] py-24">
+    <section id="blog" className="bg-[#fdf8f2] py-24">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Heading */}

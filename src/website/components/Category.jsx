@@ -58,7 +58,7 @@ const Category = () => {
         {/* Heading */}
 
         <div className="text-center">
-          <h4 className="text-[#ef4423] font-play text-2xl ">
+          <h4 className="text-[#ef4423] tect-center font-play text-2xl ">
             What We Offer
           </h4>
 

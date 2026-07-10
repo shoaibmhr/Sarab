@@ -12,8 +12,8 @@ import Feedback from "../components/Feedback";
 import Reservation from "../components/Reservation";
 import Blog from "../components/Blog";
 import NewsLetter from "../components/NewsLetter";
-
 import Contact from "../components/Contact";
+import Footer from "../components/Footer"
 
 
 
@@ -35,6 +35,7 @@ const Home = () => {
       <Blog/>
       <NewsLetter/>
       <Contact/>
+      <Footer />
 
 
     </>

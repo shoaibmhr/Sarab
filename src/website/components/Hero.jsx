@@ -6,7 +6,7 @@ import {  FaHamburger, FaFire, FaMotorcycle, FaStar } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#fdf7ef]">
+    <section id="home" className="relative overflow-hidden bg-[#fdf7ef]">
       {/* Background Shapes */}
       
       
@@ -41,31 +41,32 @@ const Hero = () => {
 
             {/* Description */}
 
-            <p className="mt-7 text-gray-500 leading-8 max-w-lg">
-              Experience bold flavors crafted from premium ingredients. From
-              crispy burgers to gourmet pizzas, every bite is an adventure worth
-              savoring.
-            </p>
+           <p className="mt-7 text-gray-500 leading-8 max-w-lg mx-auto text-center lg:mx-0 lg:text-left">
+  Experience bold flavors crafted from premium ingredients. From
+  crispy burgers to gourmet pizzas, every bite is an adventure worth
+  savoring.
+</p>
 
             {/* Buttons */}
 
-            <div className="flex flex-wrap gap-4 mt-10 ">
-              <button className="bg-[#ef4423] hover:bg-[#db3a1c] transition duration-300 text-white px-8 py-4 rounded-xl flex items-center gap-3 font-semibold shadow-lg">
-                Explore Menu
-                <ArrowRight size={18} />
-              </button>
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mt-10">
+  {/* Explore Menu Button */}
+  <button className="bg-[#ef4423] hover:bg-[#db3a1c] transition duration-300 text-white px-8 py-4 rounded-xl flex items-center justify-center gap-3 font-semibold shadow-lg w-full sm:w-auto">
+    Explore Menu
+    <ArrowRight size={18} />
+  </button>
 
-              <button className="flex items-center gap-3 font-semibold text-gray-700 hover:text-[#ef4423] transition">
-                <div className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
-                  <Play
-                    size={18}
-                    fill="#ef4423"
-                    className="text-[#ef4423] ml-1"
-                  />
-                </div>
-                Watch Our Story
-              </button>
-            </div>
+  {/* Watch Story Button */}
+  <button className="flex items-center justify-center gap-3 font-semibold text-gray-700 hover:text-[#ef4423] transition w-full sm:w-auto">
+    <div className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+      <Play
+  size={18}
+  className="text-[#ef4423] ml-1 fill-[#ef4423]"
+/>
+    </div>
+    <span>Watch Our Story</span>
+  </button>
+</div>
 
             {/* Stats */}
 
@@ -129,12 +130,12 @@ const Hero = () => {
 
             {/* Hot Deal */}
 
-            <div className="absolute left-0 top-24 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
+            <div className="hidden md:block absolute left-0 top-24 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600">
                 <FaFire className="text-1xl text-[#ef4423]" />
               </div>
 
-              <div>
+              <div >
                 <h3 className="font-bold text-sm ">Hot Deal</h3>
 
                 <p className="text-xs text-gray-500">50% off on every burger</p>
@@ -143,7 +144,7 @@ const Hero = () => {
 
             {/* Delivery */}
 
-            <div className="absolute right-0 top-44 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
+            <div className="hidden md:block absolute right-7 top-44 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
                 <FaMotorcycle className="text-1xl text-[#ef4423]" />
               </div>
@@ -157,7 +158,7 @@ const Hero = () => {
 
             {/* Rating */}
 
-            <div className="absolute right-2 bottom-24 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
+            <div className="hidden md:block absolute right-7 bottom-24 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
                 <FaStar className="text-1xl text-[#f7a321]" />
               </div>

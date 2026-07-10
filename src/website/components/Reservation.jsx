@@ -7,7 +7,7 @@ import { FaUtensils } from "react-icons/fa";
 
 const Reservation = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-20 px-5">
+    <section id="reservation" className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-20 px-5">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
 

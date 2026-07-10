@@ -76,12 +76,12 @@ const Card = ({ item }) => {
 
 const Gallery = () => {
   return (
-    <section className="max-w-7xl mx-auto px-5 py-20">
-      <p className="uppercase tracking-[4px] text-amber-400 text-sm font-semibold">
+    <section className="max-w-7xl mx-auto px-5 py-20 ">
+      <p className="uppercase tracking-[4px] text-center text-amber-400 text-sm font-semibold">
         Curated World
       </p>
 
-      <h2 className="mt-3 mb-10 text-4xl md:text-5xl font-bold font-serif">
+      <h2 className="mt-3 mb-10 text-4xl md:text-5xl text-center font-bold font-serif">
         Shop by category
       </h2>
 

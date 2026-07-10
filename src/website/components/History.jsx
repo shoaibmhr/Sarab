@@ -45,7 +45,7 @@ const Timeline = () => {
         </div>
 
         {/* Timeline */}
-        <div className="relative">
+        <div className="relative text-center">
           {/* Center Line */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-[#e94f37]"></div>
 

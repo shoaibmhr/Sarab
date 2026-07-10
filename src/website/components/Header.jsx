@@ -6,6 +6,9 @@ import {
   FaTiktok,
 } from "react-icons/fa6";
 
+
+import { FaMotorcycle } from "react-icons/fa";
+
 const Header = () => {
   return (
     <header className="bg-[#111111] text-gray-300 border-b border-gray-800">
@@ -35,7 +38,7 @@ const Header = () => {
         <div className="flex items-center gap-3">
 
           <span className="hidden sm:flex items-center bg-gradient-to-r from-red-600 to-orange-500 text-white text-[11px] font-semibold px-3 py-1 rounded-full whitespace-nowrap">
-            🚚 FREE DELIVERY TODAY!
+            <FaMotorcycle className="text-2xl m-2" /> FREE DELIVERY TODAY!
           </span>
 
           <div className="flex items-center gap-2">
