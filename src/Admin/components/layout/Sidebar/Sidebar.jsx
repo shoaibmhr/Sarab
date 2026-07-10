@@ -16,50 +16,49 @@ const Sidebar = () => {
         sticky
         top-0
         h-screen
-       bg-[#2B120D]
+        bg-[#2B120D]
         border-r
-       border-[#4A241B]
-       shadow-2xl
+        border-[#4A241B]
+        shadow-2xl
         transition-all
         duration-300
         hidden
         lg:flex
         lg:flex-col
-        ${collapsed ? "w-24" : "w-72"}
+        ${collapsed ? "w-20" : "w-64"}
       `}
     >
       {/* Logo */}
       <SidebarLogo collapsed={collapsed} />
 
       {/* Collapse Button */}
-      <div className="flex justify-end px-4 py-3 border-b border-slate-200">
+      <div className="flex justify-end border-b border-[#4A241B] px-3 py-2.5">
         <button
           onClick={() => setCollapsed(!collapsed)}
           className="
             flex
+            h-9
+            w-9
             items-center
             justify-center
-            h-10
-            w-10
-            rounded-lg
-           text-orange-200
-         hover:bg-orange-600
-         hover:text-white
-          rounded-xl
+            rounded-xl
+            text-orange-200
             transition-all
             duration-300
+            hover:bg-orange-600
+            hover:text-white
           "
         >
           {collapsed ? (
-            <PanelLeftOpen size={20} />
+            <PanelLeftOpen size={18} />
           ) : (
-            <PanelLeftClose size={20} />
+            <PanelLeftClose size={18} />
           )}
         </button>
       </div>
 
       {/* Navigation */}
-      <div className="flex-1 overflow-y-auto px-4 py-5 space-y-6 scrollbar-thin">
+      <div className="sidebar-scroll flex-1 space-y-5 overflow-y-auto px-3 py-4">
         {sidebarData.map((section) => (
           <SidebarSection
             key={section.title}
@@ -69,6 +68,7 @@ const Sidebar = () => {
           />
         ))}
       </div>
+
       {/* Footer */}
       <SidebarFooter collapsed={collapsed} />
     </aside>
