@@ -3,11 +3,15 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    tailwindcss(), // <-- Tailwind ko upar rakhin
+    react(), // <-- React ko niche
+  ],
   server: {
     watch: {
       usePolling: true,
-      interval: 100,
+      interval: 500,
+      binaryInterval: 1000,
     },
   },
 });

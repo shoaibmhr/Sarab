@@ -30,7 +30,7 @@ import Profile from "../pages/Profile";
 const AdminRoutes = () => {
   return (
     <Routes>
-      <Route path="/admin" element={<AdminLayout />}>
+      <Route path="/" element={<AdminLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="orders" element={<Orders />} />
