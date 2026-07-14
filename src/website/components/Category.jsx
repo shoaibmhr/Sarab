@@ -61,13 +61,13 @@ const Category = () => {
             What We Offer
           </h4>
 
-          <h2 className="mt-3 text-2xl font-playfair md:text-5xl font-black leading-tight">
+          <h2 className="mt-3 text-2xl font-playfair md:text-4xl font-black leading-tight">
             Browse by <span className="text-[#ef4423]">Category</span>
           </h2>
 
           <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
 
-          <p className="max-w-xl mx-auto text-gray-500 mt-5 text-md leading-8">
+          <p className="max-w-xl mx-auto text-gray-500 mt-5 text-sm leading-8">
             From sizzling burgers to exotic world cuisines - find your favourite
             in our menu
           </p>
@@ -88,7 +88,7 @@ const Category = () => {
               {/* Image */}
 
               <div className="flex justify-center">
-                <div className="w-24 h-24 rounded-full overflow-hidden">
+                <div className="w-20 h-20 rounded-full overflow-hidden">
                   <img
                     src={category.image}
                     alt={category.title}
@@ -99,13 +99,13 @@ const Category = () => {
 
               {/* Title */}
 
-              <h3 className="mt-6 text-xl font-bold text-gray-800">
+              <h3 className="mt-6 text-md font-bold text-gray-800">
                 {category.title}
               </h3>
 
               {/* Items */}
 
-              <p className="mt-2 text-gray-400">{category.items}</p>
+              <p className="mt-2 text-xs text-gray-400">{category.items}</p>
               {/* Decorative Background */}
 
               <div className="absolute left-0 top-20 w-50 h-50 bg-orange-100 rounded-full blur-3xl opacity-40 -z-10"></div>

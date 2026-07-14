@@ -44,15 +44,15 @@ const About = () => {
             <img
               src={MainImage}
               alt="Restaurant"
-              className="rounded-3xl w-full h-[450px] object-cover shadow-xl"
+              className="rounded-3xl w-full h-[430px] object-cover shadow-xl"
             />
 
             {/* Experience Box */}
 
-            <div className="absolute animate-float top-8 -left-4 lg:-left-8 bg-[#ef4423] text-white rounded-2xl px-7 py-6 shadow-2xl">
-              <h2 className="text-4xl font-black">12+</h2>
+            <div className="absolute animate-float top-8 -left-4 lg:-left-8 bg-[#ef4423] text-white rounded-2xl px-5 py-4 shadow-2xl">
+              <h2 className="text-2xl font-black">12+</h2>
 
-              <p className="text-sm mt-2 leading-6">
+              <p className="text-xs mt-2 leading-6">
                 Years of
                 <br />
                 Excellence
@@ -75,7 +75,7 @@ const About = () => {
               Our Story
             </h5>
 
-            <h2 className="text-2xl lg:text-4xl font-playfair font-black leading-tight">
+            <h2 className="text-2xl lg:text-3xl font-playfair font-black leading-tight">
               We Invite You to Visit
               <br />
               Our <span className="text-[#ef4423]">Food Restaurant</span>
@@ -84,7 +84,7 @@ const About = () => {
             {/* Underline */}
             <div className="w-16 h-1 bg-orange-400 rounded-full mt-5 mb-4 mx-auto lg:mx-0"></div>
 
-            <p className="text-gray-500 leading-8 text-md mb-0 max-w-xl mx-auto lg:mx-0">
+            <p className="text-gray-500 leading-8 text-sm mb-0 max-w-xl mx-auto lg:mx-0">
               Founded in 2012, Sarab began as a small corner joint with a big
               dream — to serve food that brings people together. Today we're
               proud to serve thousands of happy customers every week with the
@@ -100,7 +100,7 @@ const About = () => {
                 >
                   {/* Icon */}
                   <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center ${feature.color}`}
+                    className={`w-10 h-10 rounded-xl flex items-center justify-center ${feature.color}`}
                   >
                     {feature.icon}
                   </div>
@@ -111,7 +111,7 @@ const About = () => {
                       {feature.title}
                     </h3>
 
-                    <p className="text-gray-500 mt-1 leading-7">
+                    <p className="text-gray-500 mt-1 text-sm leading-7">
                       {feature.desc}
                     </p>
                   </div>
@@ -121,7 +121,7 @@ const About = () => {
 
             {/* Button */}
             <div className="mt-0 flex justify-center lg:justify-start">
-              <button className="bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl flex items-center gap-3 font-semibold">
+              <button className="bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-5 py-4 rounded-full shadow-xl hover:shadow-2xl flex items-center text-sm gap-3 font-semibold">
                 <FaUtensils />
                 View Full Menu
               </button>
