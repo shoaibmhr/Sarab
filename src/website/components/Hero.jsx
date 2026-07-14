@@ -151,7 +151,7 @@ const Hero = () => {
 
             {/* Delivery */}
 
-            <div className="hidden md:block absolute right-10 top-14 animate-float bg-white rounded-2xl shadow-xl px-8 py-3 flex items-center gap-3 z-30">
+            <div className="hidden md:block absolute right-10 top-14 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
                 <FaMotorcycle className="text-1xl text-[#ef4423]" />
               </div>
@@ -165,7 +165,7 @@ const Hero = () => {
 
             {/* Rating */}
 
-            <div className="hidden md:block absolute right-7 bottom-10 animate-float bg-white rounded-2xl shadow-xl px-8 py-3 flex items-center gap-3 z-30">
+            <div className="hidden md:block absolute right-7 bottom-10 animate-float bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
                 <FaStar className="text-1xl text-[#f7a321]" />
               </div>
