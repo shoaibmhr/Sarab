@@ -1,27 +1,28 @@
 import React from "react";
 import { Clock3, Phone, Users, MapPin } from "lucide-react";
 
-
 import { FaUtensils } from "react-icons/fa";
-
 
 const Reservation = () => {
   return (
-    <section id="reservation" className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-20 px-5">
+    <section
+      id="reservation"
+      className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-20 px-5"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
 
         <div className="text-center mb-14">
-          <p className="text-[#d62828] text-2xl font-play font-medium">
+          <p className="text-[#d62828] text-1xl font-play font-medium">
             Book a Table
           </p>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair text-[#222] mt-2">
+          <h2 className="text-2xl md:text-4xl lg:text-4xl font-bold font-playfair text-[#222] mt-2">
             Make a <span className="text-[#d62828]">Reservation</span>
           </h2>
-          <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
+          <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-3"></div>
 
-          <p className="text-gray-500 max-w-xl mx-auto mt-5 leading-8">
+          <p className="text-gray-500 max-w-xl mx-auto mt-3 leading-8">
             Reserve your table for a memorable dining experience. We recommend
             booking 24 hours in advance for weekend evenings.
           </p>
@@ -33,10 +34,10 @@ const Reservation = () => {
           {/* Left Contact Card */}
 
           <div className="lg:col-span-4">
-            <div className="bg-[#171717] rounded-3xl p-8 text-white shadow-[0_25px_60px_rgba(0,0,0,0.35)] h-full">
+            <div className="bg-[#171717] rounded-3xl p-6 text-white shadow-[0_25px_60px_rgba(0,0,0,0.35)] h-full">
               <h3 className="text-2xl font-bold mb-3">Contact Info</h3>
 
-              <p className="text-gray-400 leading-7 mb-10">
+              <p className="text-gray-400 leading-7 mb-7">
                 We're happy to help you plan the perfect dining experience.
               </p>
 
@@ -109,8 +110,8 @@ const Reservation = () => {
           {/* Right Side Form */}
 
           <div className="lg:col-span-8">
-            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-500">
-              <form className="space-y-6">
+            <div className="bg-white rounded-3xl p-3 md:p-5 shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-500">
+              <form className="space-y-4">
                 {/* Row 1 */}
 
                 <div className="grid md:grid-cols-2 gap-5">
@@ -221,12 +222,11 @@ const Reservation = () => {
 
                 {/* Button */}
 
-                 <div className="mt-10 flex justify-center">
-              <button className="flex bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl items-center gap-3 font-semibold">
-                 <FaUtensils /> View Full Menu
-              </button>
-             
-            </div>
+                <div className="mt-10 flex justify-center">
+                  <button className="flex bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl items-center gap-3 font-semibold">
+                    <FaUtensils /> View Full Menu
+                  </button>
+                </div>
               </form>
             </div>
           </div>

@@ -36,19 +36,15 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="bg-[#fdf8f2] py-24">
+    <section id="blog" className="bg-[#fdf8f2] py-15">
       <div className="max-w-7xl mx-auto px-4">
-
         {/* Heading */}
 
         <div className="text-center">
-          <p className="text-[#ef4423] text-2xl font-play">
-            Our Blog
-          </p>
+          <p className="text-[#ef4423] text-1xl font-play">Our Blog</p>
 
-          <h2 className="text-4xl lg:text-5xl font-bold font-playfair mt-3">
-            Latest Food{" "}
-            <span className="text-[#ef4423]">Articles</span>
+          <h2 className="text-2xl lg:text-4xl font-bold font-playfair mt-3">
+            Latest Food <span className="text-[#ef4423]">Articles</span>
           </h2>
 
           <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
@@ -56,8 +52,7 @@ const Blog = () => {
 
         {/* Blog Cards */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-13">
           {foods.map((food) => (
             <div
               key={food.id}
@@ -69,17 +64,17 @@ const Blog = () => {
                 <img
                   src={food.image}
                   alt={food.title}
-                  className="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
+                  className="w-full h-50 object-cover group-hover:scale-110 transition duration-500"
                 />
 
-                <span className="absolute top-5 left-5 bg-[#ef4423] text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <span className="absolute top-5 left-5 bg-[#ef4423] text-white px-2 py-2 rounded-full text-sm font-semibold">
                   {food.badge}
                 </span>
               </div>
 
               {/* Body */}
 
-              <div className="p-7">
+              <div className="p-5">
                 <p className="uppercase text-[#ef4423] font-semibold tracking-wider text-sm">
                   {food.category}
                 </p>
@@ -89,30 +84,25 @@ const Blog = () => {
                 </h3>
 
                 <div className="flex items-center gap-6 mt-6 text-gray-500">
-
                   <div className="flex items-center gap-2">
-                   <FaUser className="text-[#ef4423] text-md" />
+                    <FaUser className="text-[#ef4423] text-md" />
                     <span>{food.author}</span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                  <FaComment className="text-[#e6392f] text-md" />
+                    <FaComment className="text-[#e6392f] text-md" />
                     <span>{food.comments}</span>
                   </div>
-
                 </div>
 
                 <button className="mt-8 text-[#ef4423] font-bold flex items-center gap-2 hover:gap-4 transition-all">
                   Read More
                   <FaArrowRight />
                 </button>
-
               </div>
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

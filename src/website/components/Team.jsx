@@ -1,4 +1,3 @@
-
 import chef1 from "../../assets/image/1.jpg";
 import chef2 from "../../assets/image/2.jpg";
 import chef3 from "../../assets/image/3.jpg";
@@ -40,9 +39,9 @@ export default function Team() {
         {/* Heading */}
 
         <div className="text-center mb-14">
-          <p className="text-[#ef4423] font-play text-2xl">The Culinary Team</p>
+          <p className="text-[#ef4423] font-play text-1xl">The Culinary Team</p>
 
-          <h2 className="text-4xl lg:text-5xl font-playfair font-bold font-serif mt-2">
+          <h2 className="text-2xl lg:text-4xl font-playfair font-bold font-serif mt-2">
             Meet Our Expert <span className="text-[#ef4423]">Chef</span>
           </h2>
 
@@ -94,8 +93,8 @@ export default function Team() {
                 </div>
               </div>
 
-              <div className="text-center py-6 px-4">
-                <h3 className="text-2xl font-bold text-gray-800">
+              <div className="text-center py-5 px-3">
+                <h3 className="text-2xl font-semibold text-gray-800">
                   {chef.name}
                 </h3>
 

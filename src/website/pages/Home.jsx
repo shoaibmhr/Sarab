@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import Marquee from "../components/Marquee";
+// import Marquee from "../components/Marquee";
 import Category from "../components/Category";
 import About from "../components/About";
 import Menu from "../components/Menu";
@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Marquee />
+      {/* <Marquee /> */}
       <Category />
       <About />
       <Menu />

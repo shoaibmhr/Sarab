@@ -2,7 +2,7 @@ import { Menu, Bell, Search, UserCircle2 } from "lucide-react";
 
 const Header = ({ setIsSidebarOpen }) => {
   return (
-    <header className="sticky top-0 z-40 flex h-15 items-center justify-between border-b border-slate-200 bg-black px-6">
+    <header className="sticky top-0 z-40 flex h-15 items-center justify-between border-b border-slate-200 bg-white px-6">
       {/* Left */}
       <div className="flex items-center gap-4">
         {/* Mobile Toggle */}

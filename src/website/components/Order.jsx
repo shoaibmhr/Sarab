@@ -38,10 +38,10 @@ export default function OpeningHours() {
 
       <div className="relative max-w-7xl mx-auto px-5">
         {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="text-white text-2xl font-play">Opening Hours</p>
+        <div className="text-center mb-5">
+          <p className="text-white text-1xl font-play">Opening Hours</p>
 
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-white mt-2">
+          <h2 className="text-2xl md:text-4xl font-semibold font-playfair text-white mt-2">
             We're Open For You
           </h2>
 
@@ -61,9 +61,7 @@ export default function OpeningHours() {
                   <div className="flex items-center gap-3">
                     <FaClock className="text-orange-400 text-sm" />
 
-                    <span className="text-gray-200 text-sm">
-                      {item.day}
-                    </span>
+                    <span className="text-gray-200 text-sm">{item.day}</span>
                   </div>
 
                   <span className={`text-sm font-semibold ${item.color}`}>
@@ -80,9 +78,7 @@ export default function OpeningHours() {
               <FaMotorcycle className="text-white text-2xl" />
             </div>
 
-            <h3 className="text-2xl font-bold text-white mt-5">
-              Order Online
-            </h3>
+            <h3 className="text-2xl font-bold text-white mt-5">Order Online</h3>
 
             <p className="text-white/90 mt-3 leading-7">
               Get hot food delivered in 25 minutes.
@@ -113,9 +109,7 @@ export default function OpeningHours() {
                   <span className="text-white">Phone</span>
                 </div>
 
-                <span className="text-gray-300 text-sm">
-                  +1 (999) 123-4567
-                </span>
+                <span className="text-gray-300 text-sm">+1 (999) 123-4567</span>
               </div>
 
               <div className="flex justify-between items-center">

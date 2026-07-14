@@ -5,21 +5,24 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa6";
 
 const Reservation = () => {
   return (
-    <section id="contact" className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-20 px-5">
+    <section
+      id="contact"
+      className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-20 px-5"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
 
         <div className="text-center mb-14">
-          <p className="text-[#d62828] text-2xl font-play font-medium">
+          <p className="text-[#d62828] text-1xl font-play font-medium">
             Get In Touch
           </p>
 
-          <h2 className="text-4xl font-playfair lg:text-5xl font-black mt-2">
+          <h2 className="text-2xl font-playfair lg:text-4xl font-black mt-2">
             Contact <span className="text-[#d62828]">Us</span>
           </h2>
           <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
 
-          <p className="text-gray-500 max-w-xl mx-auto mt-5 leading-8">
+          <p className="text-gray-500 max-w-xl mx-auto mt-3 text-md leading-8">
             Have a question, feedback, or want to plan a special event? We'd
             love to hear from you.
           </p>
@@ -188,15 +191,13 @@ const Reservation = () => {
                       Subject *
                     </label>
 
-                     <input
+                    <input
                       type="Subject"
                       placeholder="Enetr Subjec"
                       className="w-full h-12 rounded-lg border border-gray-200 bg-white px-4 transition-all duration-300 outline-none focus:border-[#d62828] focus:ring-4 focus:ring-red-100"
                     />
                   </div>
                 </div>
-
-              
 
                 {/* Message */}
 
@@ -215,7 +216,7 @@ const Reservation = () => {
                 {/* Button */}
 
                 <button className="w-50 h-13 rounded-full bg-[#d62828] text-white font-semibold tracking-wide shadow-[0_10px_30px_rgba(214,40,40,0.35)] hover:bg-red-700 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(214,40,40,0.45)] transition-all duration-300">
-                Send Message
+                  Send Message
                 </button>
               </form>
             </div>

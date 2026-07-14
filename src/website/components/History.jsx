@@ -1,5 +1,3 @@
-
-
 const timeline = [
   {
     year: "2012",
@@ -25,20 +23,20 @@ const timeline = [
 
 const Timeline = () => {
   return (
-    <section className="bg-[#faf5ef] py-24 px-5">
+    <section className="bg-[#faf5ef] py-10 px-5">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-20">
-          <p className="text-[#e94f37] text-2xl mb-2">Our Journey</p>
+          <p className="text-[#e94f37] text-1xl mb-2">Our Journey</p>
 
-          <h2 className="text-4xl font-bold font-playfair text-gray-900">
+          <h2 className="text-3xl font-bold font-playfair text-gray-900">
             A History of
             <span className="text-[#e94f37]"> Restaurant</span>
           </h2>
 
-          <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
+          <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-2"></div>
 
-          <p className="text-gray-500 max-w-xl mx-auto mt-6 leading-7">
+          <p className="text-gray-500 max-w-xl mx-auto mt-4 text-md leading-7">
             From humble beginnings to the city's most beloved restaurant — every
             chapter written with passion.
           </p>
@@ -49,7 +47,7 @@ const Timeline = () => {
           {/* Center Line */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-[#e94f37]"></div>
 
-          <div className="space-y-24">
+          <div>
             {timeline.map((item, index) => (
               <div
                 key={index}
