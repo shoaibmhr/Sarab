@@ -45,22 +45,14 @@ export default function Testimonials() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-5">
+        <p className="text-[#e6beb6] text-center text-1xl font-play">
+          Visit Our Menu
+        </p>
 
-         <p className="text-[#ef4423] text-center text-2xl font-play">
-            Visit Our Menu
-          </p>
-
-
-          <h2 className="text-4xl text-center font-playfair lg:text-5xl font-black mt-2">
-
-            Our Delicious{" "}
-
-            <span className="text-[#ef4423]">
-              Menu
-            </span>
-
-          </h2>
-          <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
+        <h2 className="text-2xl text-center font-playfair lg:text-5xl font-black mt-2">
+          Our Delicious <span className="text-[#ef4423]">Menu</span>
+        </h2>
+        <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
 
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -89,7 +81,6 @@ export default function Testimonials() {
           {testimonials.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="relative h-full rounded-3xl bg-[#FFF8F3] p-8 border border-orange-100 hover:shadow-xl duration-300">
-
                 {/* Stars */}
                 <div className="flex gap-1 text-orange-400 mb-5">
                   {[...Array(5)].map((_, i) => (
@@ -118,7 +109,6 @@ export default function Testimonials() {
                     <p className="text-gray-500 text-sm">{item.role}</p>
                   </div>
                 </div>
-
               </div>
             </SwiperSlide>
           ))}

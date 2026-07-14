@@ -1,4 +1,3 @@
-
 import banner from "../../assets/image/banner-img.jpg";
 import pizza from "../../assets/image/pizza.jpg";
 import burger from "../../assets/image/4.jpg";
@@ -8,29 +7,29 @@ import desert from "../../assets/image/6.jpg";
 const categories = [
   {
     title: "Gourmet Burger",
-    
+
     image: banner,
     large: true,
   },
   {
     title: "Pizza",
-   
+
     image: pizza,
   },
   {
     title: "Burger",
-    
+
     image: burger,
   },
   {
     title: "Wrap",
-    
+
     image: wrap,
     half: true,
   },
-   {
+  {
     title: "Desert",
-    
+
     image: desert,
     half: true,
   },
@@ -77,11 +76,11 @@ const Card = ({ item }) => {
 const Gallery = () => {
   return (
     <section className="max-w-7xl mx-auto px-5 py-20 ">
-      <p className="uppercase tracking-[4px] text-center text-amber-400 text-sm font-semibold">
+      <p className="uppercase tracking-[4px] text-center text-[#ef4423] text-sm font-semibold">
         Curated World
       </p>
 
-      <h2 className="mt-3 mb-10 text-4xl md:text-5xl text-center font-bold font-serif">
+      <h2 className="mt-3 mb-10 text-2xl md:text-4xl text-center font-bold font-serif">
         Shop by category
       </h2>
 
@@ -94,10 +93,7 @@ const Gallery = () => {
         {/* Right */}
         <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           {categories.slice(1).map((item, index) => (
-            <div
-              key={index}
-              className={item.full ? "md:col-span-2" : ""}
-            >
+            <div key={index} className={item.full ? "md:col-span-2" : ""}>
               <Card item={item} />
             </div>
           ))}

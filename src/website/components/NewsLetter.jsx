@@ -4,7 +4,7 @@ import { FaPaperPlane, FaLock } from "react-icons/fa";
 
 const Subscribe = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#cf1717] via-[#c91414] to-[#b80f0f] py-24 px-5">
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#cf1717] via-[#c91414] to-[#b80f0f] py-15 px-5">
       {/* Background Circles */}
 
       <div className="absolute inset-0 opacity-10">
@@ -23,11 +23,11 @@ const Subscribe = () => {
       <div className="relative max-w-5xl mx-auto text-center z-10">
         {/* Small Heading */}
 
-        <p className="text-[#ffd7d7]  text-2xl font-play">Stay Connected</p>
+        <p className="text-[#ffd7d7]  text-1xl font-play">Stay Connected</p>
 
         {/* Main Heading */}
 
-        <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-playfair font-bold leading-tight text-white drop-shadow-lg">
+        <h2 className="mt-4 text-2xl md:text-4xl lg:text-4xl font-playfair font-bold leading-tight text-white drop-shadow-lg">
           Subscribe & Get Exclusive{" "}
           <span className="text-[#f7a321]">Deals</span>
         </h2>

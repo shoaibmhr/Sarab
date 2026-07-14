@@ -1,4 +1,3 @@
-
 // Images
 import Burger from "../../assets/image/banner-img.jpg";
 import Pizza from "../../assets/image/pizza.jpg";
@@ -53,22 +52,22 @@ const Category = () => {
   ];
 
   return (
-    <section className="bg-[#fdf8f2] py-24">
+    <section className="bg-[#fdf8f2] py-10">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
 
         <div className="text-center">
-          <h4 className="text-[#ef4423] tect-center font-play text-2xl ">
+          <h4 className="text-[#ef4423] tect-center font-play text-1xl ">
             What We Offer
           </h4>
 
-          <h2 className="mt-3 text-4xl font-playfair md:text-6xl font-black leading-tight">
+          <h2 className="mt-3 text-2xl font-playfair md:text-5xl font-black leading-tight">
             Browse by <span className="text-[#ef4423]">Category</span>
           </h2>
 
           <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
 
-          <p className="max-w-xl mx-auto text-gray-500 mt-8 text-lg leading-8">
+          <p className="max-w-xl mx-auto text-gray-500 mt-5 text-md leading-8">
             From sizzling burgers to exotic world cuisines - find your favourite
             in our menu
           </p>
@@ -76,7 +75,7 @@ const Category = () => {
 
         {/* Cards */}
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-7">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
           {categories.map((category) => (
             <div
               key={category.id}
@@ -109,7 +108,7 @@ const Category = () => {
               <p className="mt-2 text-gray-400">{category.items}</p>
               {/* Decorative Background */}
 
-              <div className="absolute left-0 top-20 w-72 h-72 bg-orange-100 rounded-full blur-3xl opacity-40 -z-10"></div>
+              <div className="absolute left-0 top-20 w-50 h-50 bg-orange-100 rounded-full blur-3xl opacity-40 -z-10"></div>
 
               <div className="absolute right-0 bottom-10 w-80 h-80 bg-red-100 rounded-full blur-3xl opacity-30 -z-10"></div>
             </div>

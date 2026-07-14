@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -12,19 +12,9 @@ import Wraps from "../../assets/image/5.jpg";
 import Dessert from "../../assets/image/6.jpg";
 
 const Menu = () => {
-
   const [activeCategory, setActiveCategory] = useState("All");
 
-
-  const categories = [
-    "All",
-    "Burger",
-    "Pizza",
-    "Chicken",
-    "Wrap",
-    "Dessert",
-  ];
-
+  const categories = ["All", "Burger", "Pizza", "Chicken", "Wrap", "Dessert"];
 
   const foods = [
     {
@@ -88,91 +78,53 @@ const Menu = () => {
     },
   ];
 
-
   const filteredFoods =
     activeCategory === "All"
       ? foods
       : foods.filter(
           (food) =>
-            food.category.toLowerCase() ===
-            activeCategory.toLowerCase()
+            food.category.toLowerCase() === activeCategory.toLowerCase(),
         );
 
-
   return (
-
-    <section id="menu" className="bg-[#fdf8f2] py-24">
-
+    <section id="menu" className="bg-[#fdf8f2] py-13">
       <div className="max-w-7xl mx-auto px-4">
-
-
         {/* Heading */}
 
         <div className="text-center">
+          <p className="text-[#ef4423]  text-1xl font-play">Visit Our Menu</p>
 
-          <p className="text-[#ef4423]  text-2xl font-play">
-            Visit Our Menu
-          </p>
-
-
-          <h2 className="text-4xl font-playfair lg:text-5xl font-black mt-2">
-
-            Our Delicious{" "}
-
-            <span className="text-[#ef4423]">
-              Menu
-            </span>
-
+          <h2 className="text-2xl font-playfair lg:text-4xl font-black mt-2">
+            Our Delicious <span className="text-[#ef4423]">Menu</span>
           </h2>
           <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
 
-
-
           {/* Category Buttons */}
 
-          <div className="flex flex-wrap justify-center gap-3 mt-10">
-
-
-            {categories.map((item)=>(
-
+          <div className="flex flex-wrap justify-center gap-3 mt-5">
+            {categories.map((item) => (
               <button
                 key={item}
-                onClick={()=>setActiveCategory(item)}
+                onClick={() => setActiveCategory(item)}
                 className={`
                 px-6 py-2 rounded-full border-light transition duration-300
                 ${
                   activeCategory === item
-                  ? "bg-[#ef4423] text-white border-[#ef4423]"
-                  : "bg-white hover:bg-[#ef4423] hover:text-white"
+                    ? "bg-[#ef4423] text-white border-[#ef4423]"
+                    : "bg-white hover:bg-[#ef4423] hover:text-white"
                 }
                 `}
               >
-
                 {item}
-
               </button>
-
-
             ))}
-
-
           </div>
-
-
         </div>
-
-
-
 
         {/* Food Cards */}
 
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-
-
-          {filteredFoods.map((food)=>(
-
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+          {filteredFoods.map((food) => (
             <div
               key={food.id}
               className="
@@ -187,20 +139,15 @@ const Menu = () => {
               group
               "
             >
-
-
-
               {/* Image */}
 
               <div className="relative overflow-hidden">
-
-
                 <img
                   src={food.image}
                   alt={food.title}
                   className="
                   w-full 
-                  h-64 
+                  h-50 
                   object-cover 
                   group-hover:scale-110 
                   transition 
@@ -208,9 +155,8 @@ const Menu = () => {
                   "
                 />
 
-
-
-                <span className="
+                <span
+                  className="
                 absolute 
                 top-4 
                 left-4 
@@ -221,16 +167,13 @@ const Menu = () => {
                 rounded-full 
                 text-xs 
                 font-semibold
-                ">
-
+                "
+                >
                   {food.badge}
-
                 </span>
 
-
-
                 <button
-                className="
+                  className="
                 absolute 
                 top-4 
                 right-4 
@@ -246,101 +189,74 @@ const Menu = () => {
                 hover:bg-[#ef4423] 
                  hover:text-white 
                 transition
-                " 
+                "
                 >
-
-                  <FontAwesomeIcon 
-                  icon={faHeart}
-                  />
-
+                  <FontAwesomeIcon icon={faHeart} />
                 </button>
-
-
               </div>
-
-
-
-
 
               {/* Card Body */}
 
-
-              <div className="p-6">
-
-
+              <div className="p-3">
                 <p className="text-[#ef4423] font-medium text-sm">
-
                   {food.category}
-
                 </p>
 
-
-
-                <h3 className="
+                <h3
+                  className="
                 text-2xl 
                 font-playfair
                 font-bold 
                 mt-2 
                 text-gray-800
-                ">
-
+                "
+                >
                   {food.title}
-
                 </h3>
 
-
-
-                <p className="
+                <p
+                  className="
                 text-gray-500 
                 leading-7 
                 mt-3
-                ">
-
-                  Fresh ingredients, premium quality and unforgettable taste for every customer.
-
+                "
+                >
+                  Fresh ingredients, premium quality and unforgettable taste for
+                  every customer.
                 </p>
 
-
-
-
-                <div className="
+                <div
+                  className="
                 flex 
                 items-center 
                 justify-between 
                 mt-6
-                ">
-
-
+                "
+                >
                   <div>
-
-                    <span className="
+                    <span
+                      className="
                     text-[#ef4423] 
                     text-2xl 
                     font-bold
-                    ">
-
+                    "
+                    >
                       {food.price}
-
                     </span>
 
-
-                    <span className="
+                    <span
+                      className="
                     text-gray-400 
                     line-through 
                     ml-2
-                    ">
-
+                    "
+                    >
                       {food.oldPrice}
-
                     </span>
-
-
                   </div>
 
-
-
                   <button
-                  className="
+                    className="
                   w-11 
                   h-11 
                   rounded-full 
@@ -352,53 +268,24 @@ const Menu = () => {
                   duration-300
                   "
                   >
-
                     +
-
                   </button>
-
-
                 </div>
-
-
-
               </div>
-
-
-
             </div>
-
-
-
           ))}
-
-
-
         </div>
-
-
-
-
 
         {/* Button */}
 
-
-       <div className="mt-10 flex justify-center">
-              <button className="flex bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl items-center gap-3 font-semibold">
-                 <FaUtensils /> View Full Menu
-              </button>
-             
-            </div>
-
-
+        <div className="mt-10 flex justify-center">
+          <button className="flex bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl items-center gap-3 font-semibold">
+            <FaUtensils /> View Full Menu
+          </button>
+        </div>
       </div>
-
-
     </section>
-
   );
-
 };
-
 
 export default Menu;
