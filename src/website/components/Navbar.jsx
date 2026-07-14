@@ -30,17 +30,17 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-17">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white text-2xl">
-              <FaUtensils size={17} />
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white text-2xl">
+              <FaUtensils size={15} />
             </div>
 
             <div>
-              <h1 className="text-3xl font-extrabold">
+              <h1 className="text-2xl font-extrabold">
                 <span className="text-black">Sa</span>
                 <span className="text-red-600">rab</span>
               </h1>
 
-              <p className="text-[10px] tracking-[3px] text-gray-400 uppercase">
+              <p className="text-[8px] tracking-[3px] text-gray-400 uppercase">
                 Fast Food & Restaurant
               </p>
             </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
 
-          <ul className="hidden lg:flex items-center gap-10 font-small text-gray-700">
+          <ul className="hidden lg:flex items-center gap-10 font-bold text-xs text-gray-700">
             {navLinks.map((item) => (
               <li key={item.id} className="relative group cursor-pointer">
                 <a
@@ -74,10 +74,10 @@ const Navbar = () => {
           {/* Right */}
 
           <div className="hidden lg:flex items-center gap-6">
-            <Search className="cursor-pointer hover:text-red-600" size={22} />
+            <Search className="cursor-pointer hover:text-red-600" size={15} />
 
-            <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold px-5 py-3 rounded-xl shadow-lg hover:scale-105 duration-300 flex items-center gap-2">
-              <ShoppingBag size={18} />
+            <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold px-4 py-3 rounded-xl shadow-lg hover:scale-105 duration-300 text-xs flex items-center gap-2">
+              <ShoppingBag size={15} />
               Order Now
             </button>
           </div>
