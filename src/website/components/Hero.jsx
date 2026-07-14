@@ -30,7 +30,7 @@ const Hero = () => {
 
             {/* Heading */}
 
-            <h1 className="text-4xl lg:text-6xl font-playfair font-black leading-tight text-[#111]">
+            <h1 className="text-2xl lg:text-4xl font-playfair font-black leading-tight text-[#111]">
               Delicious <span className="text-[#ef4423]">Fast</span>
               <br />
               <span className="text-[#ef4423]">Food </span> for Every
