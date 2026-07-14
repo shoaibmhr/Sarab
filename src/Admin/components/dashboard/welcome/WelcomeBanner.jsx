@@ -10,7 +10,7 @@ const WelcomeBanner = ({ adminName = "Admin" }) => {
     >
       <div>
         <h1 className="flex items-center gap-2 text-2xl font-bold text-slate-800 sm:text-3xl">
-          Welcome back, {adminName} <span>👋</span>
+          Welcombbbe back, {adminName} <span>👋</span>
         </h1>
         <p className="mt-1 text-sm text-slate-500">
           Here's what's happening in your restaurant today.
