@@ -49,7 +49,7 @@ const About = () => {
 
             {/* Experience Box */}
 
-            <div className="absolute animate-float top-8 -left-4 lg:-left-8 bg-[#ef4423] text-white rounded-2xl px-5 py-4 shadow-2xl">
+            <div className="absolute animate-float top-8 -left-4 lg:-left-3 bg-[#ef4423] text-white rounded-2xl px-5 py-4 shadow-2xl">
               <h2 className="text-2xl font-black">12+</h2>
 
               <p className="text-xs mt-2 leading-6">
