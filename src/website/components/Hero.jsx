@@ -30,7 +30,7 @@ const Hero = () => {
 
             {/* Heading */}
 
-            <h1 className="text-2xl lg:text-3xl font-playfair font-black leading-tight text-[#111]">
+            <h1 className="text-3xl lg:text-4xl font-playfair font-black leading-tight text-[#111]">
               Delicious <span className="text-[#ef4423]">Fast</span>
               <br />
               <span className="text-[#ef4423]">Food </span> for Every
@@ -69,47 +69,35 @@ const Hero = () => {
 
             {/* Stats */}
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-5">
-              <div>
-                <h2 className="text-3xl font-playfair font-black text-[#111]">
-                  850+
-                </h2>
+           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+  <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+    <h2 className="text-2xl font-black text-[#ef4423]">850+</h2>
+    <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
+      Happy Customers
+    </p>
+  </div>
 
-                <p className="text-xs uppercase tracking-wider text-gray-500 mt-2">
-                  Happy Customers
-                </p>
-              </div>
+  <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+    <h2 className="text-2xl font-black text-[#ef4423]">120+</h2>
+    <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
+      Menu Items
+    </p>
+  </div>
 
-              <div>
-                <h2 className="text-3xl font-playfair font-black text-[#111]">
-                  120+
-                </h2>
+  <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+    <h2 className="text-2xl font-black text-[#ef4423]">15+</h2>
+    <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
+      Expert Chefs
+    </p>
+  </div>
 
-                <p className="text-xs uppercase tracking-wider text-gray-500 mt-2">
-                  Menu Items
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-playfair font-black text-[#111]">
-                  15+
-                </h2>
-
-                <p className="text-xs uppercase tracking-wider text-gray-500 mt-2">
-                  Expert Chefs
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-playfair font-black text-[#111]">
-                  12yr
-                </h2>
-
-                <p className="text-xs uppercase tracking-wider text-gray-500 mt-2">
-                  Experience
-                </p>
-              </div>
-            </div>
+  <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+    <h2 className="text-2xl font-black text-[#ef4423]">12+</h2>
+    <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
+      Years Experience
+    </p>
+  </div>
+</div>
           </div>
 
           {/* ================= RIGHT ================= */}

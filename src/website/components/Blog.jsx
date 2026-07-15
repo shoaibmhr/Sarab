@@ -79,11 +79,11 @@ const Blog = () => {
                   {food.category}
                 </p>
 
-                <h3 className="text-xl font-bold mt-4 leading-snug text-gray-900">
+                <h3 className="text-l font-semibold mt-2 leading-snug text-gray-900">
                   {food.title}
                 </h3>
 
-                <div className="flex items-center gap-6 mt-6 text-gray-500">
+                <div className="flex items-center gap-6 mt-3 text-gray-500">
                   <div className="flex items-center gap-2">
                     <FaUser className="text-[#ef4423] text-md" />
                     <span>{food.author}</span>
@@ -95,7 +95,7 @@ const Blog = () => {
                   </div>
                 </div>
 
-                <button className="mt-8 text-[#ef4423] font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                <button className="mt-5 text-[#ef4423] font-bold flex items-center gap-2 hover:gap-4 transition-all">
                   Read More
                   <FaArrowRight />
                 </button>

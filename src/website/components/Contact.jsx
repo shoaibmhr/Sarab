@@ -30,12 +30,12 @@ const Reservation = () => {
 
         {/* Main Grid */}
 
-        <div className="grid lg:grid-cols-12 gap-8 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 mt-[-30px] items-start">
           {/* Left Contact Card */}
 
           <div className="lg:col-span-4">
-            <div className="bg-[#171717] rounded-3xl p-8 text-white shadow-[0_25px_60px_rgba(0,0,0,0.35)] h-full">
-              <h3 className="text-2xl font-bold mb-3">Let's Talk</h3>
+            <div className="bg-[#171717] rounded-3xl p-6 text-white shadow-[0_25px_60px_rgba(0,0,0,0.35)] h-full">
+              <h3 className="text-2xl font-bold mb-1">Let's Talk</h3>
 
               <p className="text-gray-400 leading-7 mb-10">
                 We typically respond within 2 hours during business hours.
@@ -54,7 +54,7 @@ const Reservation = () => {
                   </h4>
 
                   <p className="text-gray-300">
-                    42 Flavor Street, Manhattan, New York, NY 10001
+                    42 Flavor Street, Manhattan, New York
                   </p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const Reservation = () => {
 
               {/* Group Dining */}
 
-              <div className="flex items-start gap-4 mb-4">
+              <div className="flex items-start gap-4 mb-3">
                 <div className="w-12 h-12 rounded-xl bg-[#d62828] flex items-center justify-center">
                   <Users size={22} />
                 </div>
@@ -141,8 +141,8 @@ const Reservation = () => {
           {/* Right Side Form */}
 
           <div className="lg:col-span-8">
-            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-500">
-              <form className="space-y-6">
+            <div className="bg-white rounded-3xl p-5 md:p-7 shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-500">
+              <form className="space-y-4">
                 {/* Row 1 */}
 
                 <div className="grid md:grid-cols-2 gap-5">

@@ -43,15 +43,15 @@ const Timeline = () => {
         </div>
 
         {/* Timeline */}
-        <div className="relative text-center">
+        <div className="relative text-center mt-[-50px]">
           {/* Center Line */}
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-[#e94f37]"></div>
+          <div className="hidden md:block absolute left-1/2 top-0 mt-[-25px]  h-full w-[2px] -translate-x-1/2 bg-[#e94f37]"></div>
 
           <div>
             {timeline.map((item, index) => (
               <div
                 key={index}
-                className="relative grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+                className="relative grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-[-40px]"
               >
                 {/* Content */}
                 <div
@@ -81,7 +81,7 @@ const Timeline = () => {
 
                 {/* Timeline Dot */}
                 <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-5 h-5 rounded-full border-2 border-[#e94f37] bg-white flex items-center justify-center">
+                  <div className="w-5 h-5 mt-[-70px] rounded-full border-2 border-[#e94f37] bg-white flex items-center justify-center">
                     <div className="w-2 h-2 rounded-full bg-[#e94f37]"></div>
                   </div>
                 </div>

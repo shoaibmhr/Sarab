@@ -94,15 +94,15 @@ export default function Team() {
               </div>
 
               <div className="text-center py-5 px-3">
-                <h3 className="text-2xl font-semibold text-gray-800">
+                <h3 className="text-1xl font-bold text-gray-800">
                   {chef.name}
                 </h3>
 
-                <p className="text-[#ef4423] uppercase text-1xl mt-2 tracking-wide">
+                <p className="text-[#ef4423] uppercase text-xs mt-1  tracking-wide">
                   {chef.category}
                 </p>
 
-                <p className="text-gray-400 mt-3">{chef.experience}</p>
+                <p className="text-gray-400 ">{chef.experience}</p>
               </div>
             </div>
           ))}

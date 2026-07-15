@@ -27,7 +27,7 @@ const Header = () => {
 
         {/* Right */}
         <div className="flex items-center gap-3">
-          <span className="hidden sm:flex items-center bg-gradient-to-r from-red-600 to-orange-500 text-white text-[10px] font-semibold px-3 py-1 rounded-full whitespace-nowrap">
+          <span className="hidden sm:flex items-center bg-gradient-to-r from-red-600 to-orange-500 text-white text-[10px] font-semibold px-3 py-2 rounded-full whitespace-nowrap">
             <FaMotorcycle className="text-sm m-2" /> FREE DELIVERY TODAY!
           </span>
 

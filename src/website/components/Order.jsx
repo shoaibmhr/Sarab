@@ -26,7 +26,7 @@ const schedule = [
 
 export default function OpeningHours() {
   return (
-    <section className="relative py-24 overflow-hidden bg-[#195a43]">
+    <section className="relative py-12 overflow-hidden bg-[#195a43]">
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-10"

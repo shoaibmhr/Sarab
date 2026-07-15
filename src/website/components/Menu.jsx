@@ -101,13 +101,13 @@ const Menu = () => {
 
           {/* Category Buttons */}
 
-          <div className="flex flex-wrap justify-center gap-3 mt-5">
+          <div className="flex flex-wrap justify-center px-3 py-2 gap-3 mt-3">
             {categories.map((item) => (
               <button
                 key={item}
                 onClick={() => setActiveCategory(item)}
                 className={`
-                px-6 py-2 rounded-full border-light transition duration-300
+                px-5 py-2 rounded-full border-light transition duration-300
                 ${
                   activeCategory === item
                     ? "bg-[#ef4423] text-white border-[#ef4423]"
@@ -204,10 +204,10 @@ const Menu = () => {
 
                 <h3
                   className="
-                text-2xl 
+                text-xl 
                 font-playfair
-                font-bold 
-                mt-2 
+                font-semibold 
+                mt-1 
                 text-gray-800
                 "
                 >
@@ -217,8 +217,9 @@ const Menu = () => {
                 <p
                   className="
                 text-gray-500 
-                leading-7 
-                mt-3
+                leading-5 
+                mt-1
+                font-xs
                 "
                 >
                   Fresh ingredients, premium quality and unforgettable taste for
@@ -230,7 +231,7 @@ const Menu = () => {
                 flex 
                 items-center 
                 justify-between 
-                mt-6
+                mt-3
                 "
                 >
                   <div>

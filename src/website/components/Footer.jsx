@@ -12,11 +12,20 @@ import {
   FaHeart,
 } from "react-icons/fa";
 
+const footerLinks = [
+  { name: "Home", link: "#home" },
+  { name: "About Us", link: "#about" },
+  { name: "Our Menu", link: "#menu" },
+  { name: "Reservation", link: "#reservation" },
+  { name: "Blog", link: "#blog" },
+  { name: "Contact", link: "#contact" },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-[#181818] text-gray-400">
       {/* Top Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-3 py-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo */}
           <div>
@@ -56,21 +65,14 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-4">
-              {[
-                "Home",
-                "About Us",
-                "Our Menu",
-                "Reservation",
-                "Blog",
-                "Contact",
-              ].map((item) => (
-                <li key={item}>
+              {footerLinks.map((item) => (
+                <li key={item.name}>
                   <a
-                    href="#"
+                    href={item.link}
                     className="flex items-center gap-2 hover:text-[#ef4423] duration-300"
                   >
                     <FaChevronRight className="text-xs text-[#ef4423]" />
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}

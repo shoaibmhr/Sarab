@@ -7,40 +7,40 @@ import desert from "../../assets/image/6.jpg";
 const categories = [
   {
     title: "Gourmet Burger",
-
     image: banner,
-    large: true,
+    height: "h-[500px]",
+    width: "w-full",
   },
   {
     title: "Pizza",
-
     image: pizza,
+    height: "h-[240px]", // Change as you like
+    width: "w-full",
   },
   {
     title: "Burger",
-
     image: burger,
+    height: "h-[240px]", // Change as you like
+    width: "w-full",
   },
   {
     title: "Wrap",
-
     image: wrap,
-    half: true,
+    height: "h-[240px]", // Change as you like
+    width: "w-full",
   },
   {
     title: "Desert",
-
     image: desert,
-    half: true,
+    height: "h-[240px]", // Change as you like
+    width: "w-full",
   },
 ];
 
 const Card = ({ item }) => {
   return (
     <div
-      className={`group relative overflow-hidden rounded-3xl cursor-pointer ${
-        item.large ? "h-[620px]" : "h-[300px]"
-      }`}
+      className={`group relative overflow-hidden rounded-3xl cursor-pointer ${item.height} ${item.width}`}
     >
       <img
         src={item.image}
@@ -48,24 +48,18 @@ const Card = ({ item }) => {
         className="w-full h-full object-cover duration-500 group-hover:scale-110"
       />
 
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
 
+      {/* Content */}
       <div className="absolute bottom-6 left-6 right-6 z-10 flex items-end justify-between">
         <div>
-          <p className="text-amber-400 tracking-[3px] text-sm font-medium uppercase">
-            {item.items}
-          </p>
-
-          <h3
-            className={`font-serif font-bold text-white mt-2 ${
-              item.large ? "text-2xl" : "text-2xl"
-            }`}
-          >
+          <h3 className="font-serif font-bold text-white text-2xl">
             {item.title}
           </h3>
         </div>
 
-        <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xl transition-all duration-300 group-hover:bg-amber-400 group-hover:-translate-y-1">
+        <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xl transition-all duration-300 group-hover:bg-[#ef4423] group-hover:text-white group-hover:-translate-y-1">
           →
         </button>
       </div>
@@ -75,27 +69,25 @@ const Card = ({ item }) => {
 
 const Gallery = () => {
   return (
-    <section className="max-w-7xl mx-auto px-5 py-20 ">
+    <section className="max-w-7xl mx-auto px-5 py-20">
       <p className="uppercase tracking-[4px] text-center text-[#ef4423] text-sm font-semibold">
         Curated World
       </p>
 
       <h2 className="mt-3 mb-10 text-2xl md:text-4xl text-center font-bold font-serif">
-        Shop by category
+        Shop by Category
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-        {/* Left */}
+        {/* Left Large Card */}
         <div className="md:col-span-4">
           <Card item={categories[0]} />
         </div>
 
-        {/* Right */}
+        {/* Right Side */}
         <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           {categories.slice(1).map((item, index) => (
-            <div key={index} className={item.full ? "md:col-span-2" : ""}>
-              <Card item={item} />
-            </div>
+            <Card key={index} item={item} />
           ))}
         </div>
       </div>

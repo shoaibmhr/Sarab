@@ -34,16 +34,16 @@ const Reservation = () => {
           {/* Left Contact Card */}
 
           <div className="lg:col-span-4">
-            <div className="bg-[#171717] rounded-3xl p-6 text-white shadow-[0_25px_60px_rgba(0,0,0,0.35)] h-full">
-              <h3 className="text-2xl font-bold mb-3">Contact Info</h3>
+            <div className="bg-[#171717] rounded-3xl  p-5 text-white shadow-[0_25px_60px_rgba(0,0,0,0.35)] h-full">
+              <h3 className="text-2xl font-bold mt-3 mb-3">Contact Info</h3>
 
-              <p className="text-gray-400 leading-7 mb-7">
+              <p className="text-gray-400 leading-5 mb-5">
                 We're happy to help you plan the perfect dining experience.
               </p>
 
               {/* Opening Hours */}
 
-              <div className="flex items-start gap-4 mb-13">
+              <div className="flex items-start gap-4 mb-10">
                 <div className="w-12 h-12 rounded-xl bg-[#d62828] flex items-center justify-center">
                   <Clock3 size={22} />
                 </div>
@@ -59,7 +59,7 @@ const Reservation = () => {
 
               {/* Phone */}
 
-              <div className="flex items-start gap-4 mb-13">
+              <div className="flex items-start gap-4 mb-10">
                 <div className="w-12 h-12 rounded-xl bg-[#d62828] flex items-center justify-center">
                   <Phone size={22} />
                 </div>
@@ -75,7 +75,7 @@ const Reservation = () => {
 
               {/* Group Dining */}
 
-              <div className="flex items-start gap-4 mb-13">
+              <div className="flex items-start gap-4 mb-10">
                 <div className="w-12 h-12 rounded-xl bg-[#d62828] flex items-center justify-center">
                   <Users size={22} />
                 </div>
@@ -110,13 +110,13 @@ const Reservation = () => {
           {/* Right Side Form */}
 
           <div className="lg:col-span-8">
-            <div className="bg-white rounded-3xl p-3 md:p-5 shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-500">
+            <div className="bg-white rounded-3xl  md:p-5 shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-500">
               <form className="space-y-4">
                 {/* Row 1 */}
 
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-semibold mb-2">
+                    <label className="block text-sm font-semibold mb-1">
                       Full Name *
                     </label>
 
@@ -128,7 +128,7 @@ const Reservation = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold mb-2">
+                    <label className="block text-sm font-semibold mb-1">
                       Phone Number *
                     </label>
 
@@ -144,7 +144,7 @@ const Reservation = () => {
 
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-semibold mb-2">
+                    <label className="block text-sm font-semibold mb-1">
                       Email Address *
                     </label>
 
@@ -156,7 +156,7 @@ const Reservation = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold mb-2">
+                    <label className="block text-sm font-semibold mb-1">
                       Number of Guests *
                     </label>
 
@@ -174,7 +174,7 @@ const Reservation = () => {
 
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-semibold mb-2">
+                    <label className="block text-sm font-semibold mb-1">
                       Date *
                     </label>
 
@@ -209,7 +209,7 @@ const Reservation = () => {
                 {/* Message */}
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label className="block text-sm font-semibold mb-1">
                     Special Requests
                   </label>
 
@@ -222,8 +222,8 @@ const Reservation = () => {
 
                 {/* Button */}
 
-                <div className="mt-10 flex justify-center">
-                  <button className="flex bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl items-center gap-3 font-semibold">
+                <div className="mt-3 flex justify-center">
+                  <button className="flex bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-4 py-3 rounded-full shadow-xl hover:shadow-2xl items-center gap-3 font-semibold">
                     <FaUtensils /> View Full Menu
                   </button>
                 </div>
