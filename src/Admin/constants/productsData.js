@@ -1,0 +1,67 @@
+// src/admin/constants/productsData.js
+export const productsData = [
+  {
+    id: 1,
+    name: "Pepperoni Feast",
+    category: "Pizza",
+    price: 1450,
+    stock: 42,
+    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400",
+    status: "active",
+  },
+  {
+    id: 2,
+    name: "Chicken Tikka Pizza",
+    category: "Pizza",
+    price: 1550,
+    stock: 30,
+    image: "https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=400",
+    status: "active",
+  },
+  {
+    id: 3,
+    name: "Beef BBQ Burger",
+    category: "Burgers",
+    price: 850,
+    stock: 55,
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+    status: "active",
+  },
+  {
+    id: 4,
+    name: "Zinger Burger",
+    category: "Burgers",
+    price: 750,
+    stock: 5,
+    image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400",
+    status: "active",
+  },
+  {
+    id: 5,
+    name: "Chocolate Lava Cake",
+    category: "Desserts",
+    price: 450,
+    stock: 20,
+    image: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400",
+    status: "active",
+  },
+  {
+    id: 6,
+    name: "Mango Milkshake",
+    category: "Beverages",
+    price: 350,
+    stock: 0,
+    image: "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400",
+    status: "inactive",
+  },
+];
+
+export const productCategories = [
+  "All",
+  "Pizza",
+  "Burgers",
+  "Beverages",
+  "Desserts",
+  "Appetizers",
+  "BBQ & Grill",
+];
