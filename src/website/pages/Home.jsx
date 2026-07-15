@@ -17,6 +17,8 @@ import Footer from "../components/Footer"
 
 
 
+
+
 const Home = () => {
   return (
     <>
@@ -36,6 +38,7 @@ const Home = () => {
       <NewsLetter/>
       <Contact/>
       <Footer />
+      
 
 
     </>

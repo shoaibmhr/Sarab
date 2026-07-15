@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WebsiteRoutes from "./website/routes/WebsiteRoutes";
 import AdminRoutes from "./Admin/routes/AdminRoutes";
-// import AuthRoutes from "./auth/routes/AuthRoutes";
+import AuthRoutes from "./auth/routes/AuthRoutes";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/admin/*" element={<AdminRoutes />} />
 
        
-        {/* <Route path="/auth/*" element={<AuthRoutes />} /> */}
+        <Route path="/auth/*" element={<AuthRoutes />} />
       </Routes>
     </BrowserRouter>
   );

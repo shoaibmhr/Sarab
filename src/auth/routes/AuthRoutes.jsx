@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Login from "../pages/Login";
+import AuthLayout from "../components/AuthLayout"; // apna sahi path lagana
 
 const AuthRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
+      <Route path="/auth" element={<AuthLayout />} />
     </Routes>
   );
 };
