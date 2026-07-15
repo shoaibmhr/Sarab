@@ -11,7 +11,7 @@ import { monthlySalesData } from "../../../constants/dashboardData";
 
 const MonthlySalesChart = () => {
   return (
-    <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm sm:p-6">
+    <div className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm sm:p-5">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
           <h3 className="text-base font-bold text-slate-800">Monthly Sales</h3>
@@ -24,7 +24,7 @@ const MonthlySalesChart = () => {
         </span>
       </div>
 
-      <div className="mt-6 h-[280px] w-full">
+      <div className="mt-5 h-[240px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={monthlySalesData}>
             <defs>
@@ -42,12 +42,12 @@ const MonthlySalesChart = () => {
               dataKey="month"
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: "#94a3b8" }}
+              tick={{ fontSize: 11, fill: "#94a3b8" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: "#94a3b8" }}
+              tick={{ fontSize: 11, fill: "#94a3b8" }}
             />
             <Tooltip
               contentStyle={{

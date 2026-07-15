@@ -13,10 +13,10 @@ const OrderRow = ({ order }) => {
     statusStyles[order.status] || "bg-slate-100 text-slate-600";
 
   return (
-    <div className="flex items-center justify-between gap-3 border-b border-slate-50 py-3 last:border-none">
+    <div className="flex items-center justify-between gap-3 border-b border-slate-50 py-2.5 last:border-none">
       <div className="flex min-w-0 items-center gap-3">
-        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-rose-50">
-          <Package size={18} className="text-rose-500" />
+        <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-rose-50">
+          <Package size={16} className="text-rose-500" />
         </div>
 
         <div className="min-w-0">

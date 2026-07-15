@@ -2,7 +2,7 @@ import SidebarItem from "./SidebarItem";
 
 const SidebarSection = ({ title, items, collapsed = false }) => {
   return (
-    <div className="mb-6">
+    <div className="mb-5">
       {/* Section Title */}
       {!collapsed && (
         <h3
@@ -21,7 +21,7 @@ px-2
       )}
 
       {/* Menu Items */}
-      <div className="space-y-2">
+      <div className="space-y-1">
         {items.map((item) => (
           <SidebarItem
             key={item.path}

@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 
 const ReviewCard = ({ review }) => {
   return (
-    <div className="border-b border-slate-50 py-3 last:border-none">
+    <div className="border-b border-slate-50 py-2.5 last:border-none">
       <div className="flex items-center justify-between">
         <p className="text-sm font-semibold text-slate-800">{review.name}</p>
 
@@ -11,7 +11,7 @@ const ReviewCard = ({ review }) => {
           {Array.from({ length: 5 }).map((_, index) => (
             <Star
               key={index}
-              size={14}
+              size={13}
               className={
                 index < review.rating
                   ? "fill-amber-400 text-amber-400"

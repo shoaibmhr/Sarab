@@ -14,7 +14,7 @@ const RevenueChart = ({
   momChange = "+22.3% MoM",
 }) => {
   return (
-    <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm sm:p-6">
+    <div className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm sm:p-5">
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div>
           <h3 className="text-base font-bold text-slate-800">
@@ -24,14 +24,14 @@ const RevenueChart = ({
         </div>
 
         <div className="text-right">
-          <p className="text-xl font-bold text-slate-800">{totalRevenue}</p>
+          <p className="text-lg font-bold text-slate-800">{totalRevenue}</p>
           <span className="text-xs font-semibold text-green-600">
             {momChange}
           </span>
         </div>
       </div>
 
-      <div className="mt-6 h-[280px] w-full">
+      <div className="mt-5 h-[240px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={revenueThisMonthData}>
             <CartesianGrid
@@ -43,12 +43,12 @@ const RevenueChart = ({
               dataKey="day"
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: "#94a3b8" }}
+              tick={{ fontSize: 11, fill: "#94a3b8" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: "#94a3b8" }}
+              tick={{ fontSize: 11, fill: "#94a3b8" }}
             />
             <Tooltip
               contentStyle={{
@@ -63,8 +63,8 @@ const RevenueChart = ({
               dataKey="revenue"
               stroke="#dc2626"
               strokeWidth={2.5}
-              dot={{ r: 4, fill: "#dc2626" }}
-              activeDot={{ r: 6 }}
+              dot={{ r: 3.5, fill: "#dc2626" }}
+              activeDot={{ r: 5 }}
             />
           </LineChart>
         </ResponsiveContainer>

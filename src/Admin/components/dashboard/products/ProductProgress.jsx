@@ -3,7 +3,7 @@ const ProductProgress = ({ rank, name, sold, percentage }) => {
     <div>
       <div className="flex items-center justify-between text-sm">
         <div className="flex items-center gap-2">
-          <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-orange-50 text-xs font-bold text-orange-600">
+          <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-orange-50 text-xs font-bold text-orange-600">
             {rank}
           </span>
           <span className="truncate font-medium text-slate-700">{name}</span>

@@ -1,5 +1,4 @@
 const CustomerCard = ({ customer }) => {
-  // Name se initials nikalna (jaise "Ali Khan" → "AK")
   const initials = customer.name
     .split(" ")
     .map((word) => word[0])
@@ -8,8 +7,8 @@ const CustomerCard = ({ customer }) => {
     .toUpperCase();
 
   return (
-    <div className="flex items-center gap-3 border-b border-slate-50 py-3 last:border-none">
-      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-bold text-orange-600">
+    <div className="flex items-center gap-3 border-b border-slate-50 py-2.5 last:border-none">
+      <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-bold text-orange-600">
         {initials}
       </div>
 

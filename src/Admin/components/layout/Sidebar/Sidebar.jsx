@@ -25,7 +25,7 @@ const Sidebar = () => {
         hidden
         lg:flex
         lg:flex-col
-        ${collapsed ? "w-20" : "w-64"}
+        ${collapsed ? "w-20" : "w-45"}
       `}
     >
       {/* Logo */}

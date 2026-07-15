@@ -10,7 +10,7 @@ const CategoryCard = ({ category, onEdit, onDelete }) => {
         bg-white shadow-sm transition-all duration-300 hover:shadow-md
       "
     >
-      <div className="relative h-36 w-full overflow-hidden bg-slate-100 sm:h-40">
+      <div className="relative h-32 w-full overflow-hidden bg-slate-100 sm:h-36">
         <img
           src={category.image}
           alt={category.name}
@@ -32,7 +32,7 @@ const CategoryCard = ({ category, onEdit, onDelete }) => {
         </span>
       </div>
 
-      <div className="p-4 sm:p-5">
+      <div className="p-3.5 sm:p-4">
         <div className="flex items-start justify-between gap-2">
           <h3 className="truncate text-base font-bold text-slate-800">
             {category.name}
@@ -43,12 +43,12 @@ const CategoryCard = ({ category, onEdit, onDelete }) => {
           {category.description}
         </p>
 
-        <div className="mt-3 flex items-center gap-1.5 text-xs font-medium text-slate-400">
+        <div className="mt-2.5 flex items-center gap-1.5 text-xs font-medium text-slate-400">
           <Package size={14} />
           {category.itemsCount} items
         </div>
 
-        <div className="mt-4 flex items-center gap-2 border-t border-slate-50 pt-3">
+        <div className="mt-3.5 flex items-center gap-2 border-t border-slate-50 pt-3">
           <button
             onClick={() => onEdit(category)}
             className="

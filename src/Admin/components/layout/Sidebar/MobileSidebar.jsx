@@ -20,7 +20,7 @@ const MobileSidebar = ({ isOpen, setIsSidebarOpen }) => {
       <aside
         className={`
           fixed top-0 left-0 z-50
-          flex h-screen w-72 flex-col
+          flex h-screen w-64 flex-col
          bg-[#2B120D] shadow-2xl
           transition-transform duration-300 lg:hidden
 
@@ -34,7 +34,7 @@ const MobileSidebar = ({ isOpen, setIsSidebarOpen }) => {
           <button
             onClick={() => setIsSidebarOpen(false)}
             className="
-mr-4
+mr-3
 rounded-xl
 p-2
 text-orange-200
@@ -44,12 +44,12 @@ transition-all
 duration-300
 "
           >
-            <X size={22} />
+            <X size={20} />
           </button>
         </div>
 
         {/* Menu */}
-        <div className="flex-1 overflow-y-auto px-4 py-5 space-y-6">
+        <div className="flex-1 overflow-y-auto px-3 py-4 space-y-5">
           {sidebarData.map((section) => (
             <SidebarSection
               key={section.title}

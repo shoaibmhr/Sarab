@@ -68,9 +68,9 @@ const Categories = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       <div>
-        <h1 className="text-2xl font-bold text-slate-800">Categories</h1>
+        <h1 className="text-xl font-bold text-slate-800">Categories</h1>
         <p className="mt-1 text-sm text-slate-500">
           Apne menu ki categories manage karein.
         </p>
@@ -85,10 +85,11 @@ const Categories = () => {
       {filteredCategories.length > 0 ? (
         <div
           className="
-            grid grid-cols-1 gap-4
+            grid grid-cols-1 gap-3.5
             sm:grid-cols-2
             lg:grid-cols-3
             xl:grid-cols-4
+            2xl:grid-cols-5
           "
         >
           {filteredCategories.map((category) => (
@@ -101,8 +102,8 @@ const Categories = () => {
           ))}
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-white p-12 text-center shadow-sm">
-          <LayoutGrid size={40} className="text-slate-300" />
+        <div className="flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-white p-10 text-center shadow-sm">
+          <LayoutGrid size={36} className="text-slate-300" />
           <p className="mt-3 text-sm font-medium text-slate-500">
             Koi category nahi mili
           </p>

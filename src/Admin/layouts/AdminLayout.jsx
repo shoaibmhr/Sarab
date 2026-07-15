@@ -5,7 +5,7 @@ import Sidebar from "../components/layout/Sidebar/Sidebar";
 import MobileSidebar from "../components/layout/Sidebar/MobileSidebar";
 import Header from "../components/layout/Header/Header";
 
-const DashboardLayout = () => {
+const AdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
@@ -23,12 +23,14 @@ const DashboardLayout = () => {
       <div className="flex min-w-0 flex-1 flex-col">
         <Header setIsSidebarOpen={setIsSidebarOpen} />
 
-        <main className="flex-1 overflow-y-auto bg-[#FFF8F2] p-4 md:p-6 lg:p-8">
-          <Outlet />
+        <main className="flex-1 overflow-y-auto bg-[#FFF8F2] p-3 md:p-4 lg:p-6">
+          <div className="mx-auto max-w-[1440px]">
+            <Outlet />
+          </div>
         </main>
       </div>
     </div>
   );
 };
 
-export default DashboardLayout;
+export default AdminLayout;

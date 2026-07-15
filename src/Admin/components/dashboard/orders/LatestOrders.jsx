@@ -4,7 +4,7 @@ import { latestOrders } from "../../../constants/dashboardData";
 
 const LatestOrders = () => {
   return (
-    <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm sm:p-6">
+    <div className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm sm:p-5">
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-base font-bold text-slate-800">Latest Orders</h3>

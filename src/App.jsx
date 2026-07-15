@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WebsiteRoutes from "./website/routes/WebsiteRoutes";
 import AdminRoutes from "./Admin/routes/AdminRoutes";
-import Dashboard from "./Admin/pages/Dashboard/Dashboard";
 // import AuthRoutes from "./auth/routes/AuthRoutes";
 
 function App() {

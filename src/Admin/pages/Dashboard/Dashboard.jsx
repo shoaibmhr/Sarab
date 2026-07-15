@@ -10,7 +10,7 @@ import LatestReviews from "../../components/dashboard/reviews/LatestReviews";
 
 const Dashboard = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       {/* Welcome Banner */}
       <WelcomeBanner adminName="Admin" />
 
@@ -18,7 +18,7 @@ const Dashboard = () => {
       <StatsGrid />
 
       {/* Monthly Sales + Weekly Orders */}
-      <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 xl:grid-cols-3">
         <div className="xl:col-span-2">
           <MonthlySalesChart />
         </div>
@@ -28,17 +28,17 @@ const Dashboard = () => {
       </div>
 
       {/* Top Selling Products + Revenue this Month */}
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <TopSellingProducts />
         <RevenueChart />
       </div>
 
       {/* Latest Orders + New Customers + Latest Reviews */}
-      <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 xl:grid-cols-3">
         <div className="xl:col-span-2">
           <LatestOrders />
         </div>
-        <div className="flex flex-col gap-6 xl:col-span-1">
+        <div className="flex flex-col gap-4 xl:col-span-1">
           <NewCustomers />
           <LatestReviews />
         </div>

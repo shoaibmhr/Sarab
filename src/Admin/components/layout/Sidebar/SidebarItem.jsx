@@ -12,8 +12,8 @@ const SidebarItem = ({ icon: Icon, title, path, collapsed = false }) => {
         items-center
         gap-3
         rounded-xl
-        px-4
-        py-3
+        px-3
+        py-2.5
         transition-all
 duration-300
 ease-in-out
@@ -32,7 +32,7 @@ hover:translate-x-1
         <>
           {/* Icon */}
           <Icon
-            size={20}
+            size={18}
             className={`
               flex-shrink-0
               transition-all
@@ -49,6 +49,7 @@ hover:translate-x-1
           <span
             className={`
               whitespace-nowrap
+              text-sm
               font-medium
               transition-all
               duration-300
