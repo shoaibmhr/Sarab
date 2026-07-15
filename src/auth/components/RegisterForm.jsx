@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import {
   FaUser,
   FaEnvelope,
@@ -10,8 +12,9 @@ import {
   FaEye,
   FaEyeSlash,
 } from "react-icons/fa";
+const RegisterForm = () => {
+  const navigate = useNavigate();
 
-const RegisterForm = ({ setIsLogin }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -53,13 +56,14 @@ const RegisterForm = ({ setIsLogin }) => {
 
     console.log(formData);
 
-    setIsLogin(true);
+    // Future API Call
+
+    navigate("/login");
   };
 
   return (
-    <div className="w-full max-w-lg rounded-3xl bg-white shadow-2xl border border-gray-200 p-8">
+    <div className="w-full max-w-md rounded-3xl bg-white p-8 shadow-xl">
       {/* Heading */}
-
       <div className="text-center mb-8">
         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#ef4423]/10">
           <FaUtensils className="text-2xl text-[#ef4423]" />
@@ -74,15 +78,59 @@ const RegisterForm = ({ setIsLogin }) => {
         </p>
       </div>
 
+      {/* Error */}
       {error && (
         <div className="mb-5 rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-600">
           {error}
         </div>
       )}
 
+      {/* Form */}
       <form onSubmit={handleSubmit} className="space-y-5">
+        {/* Email */}
+        <div>
+          <label className="mb-2 block font-medium text-gray-700">
+            Email Address
+          </label>
+
+          <div className="relative">
+            <FaEnvelope className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="admin@restaurant.com"
+              className="w-full rounded-xl border border-gray-300 py-3 pl-12 pr-4 outline-none transition focus:border-[#ef4423] focus:ring-4 focus:ring-[#ef4423]/10"
+              required
+            />
+          </div>
+        </div>
+
+        {/* Phone Number */}
+        <div>
+          <label className="mb-2 block font-medium text-gray-700">
+            Phone Number
+          </label>
+
+          <div className="relative">
+            <FaPhoneAlt className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="+92 300 1234567"
+              className="w-full rounded-xl border border-gray-300 py-3 pl-12 pr-4 outline-none transition focus:border-[#ef4423] focus:ring-4 focus:ring-[#ef4423]/10"
+              required
+            />
+          </div>
+        </div>
         {/* Full Name */}
 
+        {/* Full Name */}
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Full Name
@@ -104,7 +152,6 @@ const RegisterForm = ({ setIsLogin }) => {
         </div>
 
         {/* Restaurant Name */}
-
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Restaurant Name
@@ -124,52 +171,9 @@ const RegisterForm = ({ setIsLogin }) => {
             />
           </div>
         </div>
-
-        {/* Email */}
-
-        <div>
-          <label className="mb-2 block font-medium text-gray-700">
-            Email Address
-          </label>
-
-          <div className="relative">
-            <FaEnvelope className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
-
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="admin@restaurant.com"
-              className="w-full rounded-xl border border-gray-300 py-3 pl-12 pr-4 outline-none transition focus:border-[#ef4423] focus:ring-4 focus:ring-[#ef4423]/10"
-              required
-            />
-          </div>
-        </div>
-
-        {/* Phone */}
-
-        <div>
-          <label className="mb-2 block font-medium text-gray-700">
-            Phone Number
-          </label>
-
-          <div className="relative">
-            <FaPhoneAlt className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
-
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="+92 300 1234567"
-              className="w-full rounded-xl border border-gray-300 py-3 pl-12 pr-4 outline-none transition focus:border-[#ef4423] focus:ring-4 focus:ring-[#ef4423]/10"
-              required
-            />
-          </div>
-        </div>
         {/* Password */}
 
+        {/* Password */}
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Password
@@ -199,7 +203,6 @@ const RegisterForm = ({ setIsLogin }) => {
         </div>
 
         {/* Confirm Password */}
-
         <div>
           <label className="mb-2 block font-medium text-gray-700">
             Confirm Password
@@ -228,8 +231,7 @@ const RegisterForm = ({ setIsLogin }) => {
           </div>
         </div>
 
-        {/* Terms */}
-
+        {/* Terms & Conditions */}
         <label className="flex items-start gap-3 text-sm text-gray-600">
           <input
             type="checkbox"
@@ -241,24 +243,22 @@ const RegisterForm = ({ setIsLogin }) => {
 
           <span>
             I agree to the{" "}
-            <span className="font-semibold text-[#ef4423] cursor-pointer hover:underline">
+            <span className="cursor-pointer font-semibold text-[#ef4423] hover:underline">
               Terms & Conditions
             </span>
           </span>
         </label>
 
         {/* Register Button */}
-
         <button
           type="submit"
-          className="w-full rounded-xl bg-[#ef4423] py-3 text-white font-semibold shadow-lg transition hover:bg-orange-600 hover:shadow-xl"
+          className="w-full rounded-xl bg-[#ef4423] py-3 font-semibold text-white shadow-lg transition hover:bg-orange-600 hover:shadow-xl"
         >
           Create Account
         </button>
       </form>
 
       {/* Divider */}
-
       <div className="my-6 flex items-center gap-3">
         <div className="h-px flex-1 bg-gray-200"></div>
 
@@ -269,37 +269,34 @@ const RegisterForm = ({ setIsLogin }) => {
         <div className="h-px flex-1 bg-gray-200"></div>
       </div>
 
-      {/* Social Buttons */}
-
+      {/* Social Login Buttons */}
       <div className="grid grid-cols-2 gap-4">
         <button
           type="button"
           className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 py-3 transition hover:bg-red-50"
         >
           <FaGoogle className="text-red-500" />
-          Google
+          <span className="font-medium">Google</span>
         </button>
 
         <button
           type="button"
           className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 py-3 transition hover:bg-gray-100"
         >
-          <FaGithub />
-          Github
+          <FaGithub className="text-gray-800" />
+          <span className="font-medium">GitHub</span>
         </button>
       </div>
 
-      {/* Login */}
-
+      {/* Login Link */}
       <p className="mt-6 text-center text-sm text-gray-500">
         Already have an account?
-        <button
-          type="button"
-          onClick={() => setIsLogin(true)}
+        <Link
+          to="/login"
           className="ml-2 font-semibold text-[#ef4423] hover:underline"
         >
           Login
-        </button>
+        </Link>
       </p>
     </div>
   );
