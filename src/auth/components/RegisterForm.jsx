@@ -292,7 +292,7 @@ const RegisterForm = () => {
       <p className="mt-6 text-center text-sm text-gray-500">
         Already have an account?
         <Link
-          to="/login"
+          to="/auth/login"
           className="ml-2 font-semibold text-[#ef4423] hover:underline"
         >
           Login

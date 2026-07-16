@@ -1,6 +1,6 @@
 import { ArrowRight, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import Burger from "../../assets/image/banner-img.jpg";
-
 import { FaHamburger, FaFire, FaMotorcycle, FaStar } from "react-icons/fa";
 
 const Hero = () => {
@@ -12,12 +12,8 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* ================= LEFT ================= */}
 
-          <div
-            className="relative z-10 text-center lg:text-left
-          "
-          >
+          <div className="relative z-10 text-center lg:text-left">
             {/* Badge */}
-
             <div className="inline-flex items-center gap-2 bg-white rounded-full px-3 py-2 shadow-md mb-3">
               <span className="text-orange-500 text-lg">
                 <FaHamburger className="text-1xl text-[#ef4423]" />
@@ -29,7 +25,6 @@ const Hero = () => {
             </div>
 
             {/* Heading */}
-
             <h1 className="text-3xl lg:text-4xl font-playfair font-black leading-tight text-[#111]">
               Delicious <span className="text-[#ef4423]">Fast</span>
               <br />
@@ -39,7 +34,6 @@ const Hero = () => {
             </h1>
 
             {/* Description */}
-
             <p className="mt-2 text-gray-500 leading-8 max-w-lg mx-auto text-center lg:mx-0 lg:text-left text-sm">
               Experience bold flavors crafted from premium ingredients. From
               crispy burgers to gourmet pizzas, every bite is an adventure worth
@@ -47,13 +41,16 @@ const Hero = () => {
             </p>
 
             {/* Buttons */}
-
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mt-4">
-              {/* Explore Menu Button */}
-              <button className="bg-[#ef4423] hover:bg-[#db3a1c] transition duration-300 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-3 font-semibold shadow-lg w-full text-xs sm:w-auto">
-                Explore Menu
+              
+              {/* FIXED: Link target changed from "/about" to "/menu" */}
+              <Link 
+                to="/menu"
+                className="bg-[#ef4423] hover:bg-[#db3a1c] transition duration-300 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-3 font-semibold shadow-lg w-full text-xs sm:w-auto text-center"
+              >
+                <span>Explore Menu</span>
                 <ArrowRight size={18} />
-              </button>
+              </Link>
 
               {/* Watch Story Button */}
               <button className="flex items-center justify-center gap-3 font-semibold text-gray-700 hover:text-[#ef4423] transition w-full sm:w-auto text-xs">
@@ -68,55 +65,43 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+              <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                <h2 className="text-2xl font-black text-[#ef4423]">850+</h2>
+                <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
+                  Happy Customers
+                </p>
+              </div>
 
-           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
-  <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-    <h2 className="text-2xl font-black text-[#ef4423]">850+</h2>
-    <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
-      Happy Customers
-    </p>
-  </div>
+              <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                <h2 className="text-2xl font-black text-[#ef4423]">120+</h2>
+                <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
+                  Menu Items
+                </p>
+              </div>
 
-  <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-    <h2 className="text-2xl font-black text-[#ef4423]">120+</h2>
-    <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
-      Menu Items
-    </p>
-  </div>
+              <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                <h2 className="text-2xl font-black text-[#ef4423]">15+</h2>
+                <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
+                  Expert Chefs
+                </p>
+              </div>
 
-  <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-    <h2 className="text-2xl font-black text-[#ef4423]">15+</h2>
-    <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
-      Expert Chefs
-    </p>
-  </div>
-
-  <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-    <h2 className="text-2xl font-black text-[#ef4423]">12+</h2>
-    <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
-      Years Experience
-    </p>
-  </div>
-</div>
+              <div className="bg-white rounded-2xl p-3 text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                <h2 className="text-2xl font-black text-[#ef4423]">12+</h2>
+                <p className="mt-3 text-xs uppercase tracking-[2px] text-gray-500">
+                  Years Experience
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* ================= RIGHT ================= */}
-
           <div className="relative flex justify-center items-center min-h-[400px]">
-            {/* Background Circle */}
-
-            {/* <div className="absolute w-[420px] h-[420px] rounded-full bg-[#f5eadf]"></div> */}
-
-            {/* <div className="absolute w-[330px] h-[330px] rounded-full bg-[#fff5eb]"></div>
-
-            <div className="absolute w-[270px] h-[270px] rounded-full bg-[#202437] shadow-2xl"></div> */}
-
             {/* Glow */}
-
             <div className="absolute w-[320px] h-[320px] bg-orange-300 blur-[100px] opacity-20 rounded-full"></div>
 
             {/* Burger */}
-
             <img
               src={Burger}
               alt="Burger"
@@ -124,7 +109,6 @@ const Hero = () => {
             />
 
             {/* Hot Deal */}
-
             <div className="hidden md:block absolute left-0 top-20 animate-float bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3 z-30">
               <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600">
                 <FaFire className="text-1xl text-[#ef4423]" />
@@ -132,13 +116,11 @@ const Hero = () => {
 
               <div>
                 <h3 className="font-bold text-xs ">Hot Deal</h3>
-
                 <p className="text-xs text-gray-500">50% off on every burger</p>
               </div>
             </div>
 
             {/* Delivery */}
-
             <div className="hidden md:block absolute right-10 top-14 animate-float bg-white rounded-2xl shadow-xl px-8 py-3 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
                 <FaMotorcycle className="text-1xl text-[#ef4423]" />
@@ -146,13 +128,11 @@ const Hero = () => {
 
               <div>
                 <h3 className="font-bold text-xs">20 min</h3>
-
                 <p className="text-xs text-gray-500">Fast Delivery</p>
               </div>
             </div>
 
             {/* Rating */}
-
             <div className="hidden md:block absolute right-7 bottom-10 animate-float bg-white rounded-2xl shadow-xl px-8 py-3 flex items-center gap-3 z-30">
               <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
                 <FaStar className="text-1xl text-[#f7a321]" />
@@ -160,22 +140,14 @@ const Hero = () => {
 
               <div>
                 <h3 className="font-bold text-xs">4.9/5</h3>
-
                 <p className="text-xs text-gray-500">Customer Rating</p>
               </div>
             </div>
-            {/* Decorative Ring */}
 
+            {/* Decorative Ring */}
             <div className="absolute w-[460px] h-[460px] rounded-full border-[35px] border-white/30"></div>
 
-            {/* Small Dots */}
-            {/* 
-            <div className="absolute top-16 right-16 w-4 h-4 rounded-full bg-orange-400 animate-pulse"></div>
-
-            <div className="absolute bottom-20 left-10 w-3 h-3 rounded-full bg-red-500 animate-ping"></div> */}
-
             {/* Blur Circle */}
-
             <div className="absolute bottom-10 right-20 w-40 h-40 bg-orange-300 rounded-full blur-3xl opacity-20"></div>
           </div>
         </div>

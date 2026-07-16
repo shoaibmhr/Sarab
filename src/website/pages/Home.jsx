@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar"
 import Hero from "../components/Hero";
 // import Marquee from "../components/Marquee";
 import Category from "../components/Category";
@@ -22,6 +23,7 @@ import Footer from "../components/Footer"
 const Home = () => {
   return (
     <>
+    <Navbar/>
       <Hero />
       {/* <Marquee /> */}
       <Category />

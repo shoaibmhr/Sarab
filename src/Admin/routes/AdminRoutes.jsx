@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom"; 
 
 import AdminLayout from "../layouts/AdminLayout";
 
@@ -28,10 +28,22 @@ import Backup from "../pages/Backup";
 import Profile from "../pages/Profile";
 
 const AdminRoutes = () => {
+  // Authentication status check
+  const isAuthenticated = localStorage.getItem("isAdminAuthenticated") === "true";
+
+  // Security Check: Agar authenticated nahi hai, to direct login page par send karein
+  if (!isAuthenticated) {
+    return <Navigate to="/auth/login" replace />;
+  }
+
   return (
+    // <Routes> wrapper ko wapas lagaya taake child <Route> render hone me error na aaye
     <Routes>
       <Route path="/" element={<AdminLayout />}>
+        {/* Index route jab user direct /admin par hoga */}
         <Route index element={<Dashboard />} />
+        
+        {/* Sub-paths of admin */}
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="orders" element={<Orders />} />
         <Route path="products" element={<Products />} />

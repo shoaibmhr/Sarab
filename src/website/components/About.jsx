@@ -1,4 +1,6 @@
-import { Leaf, Award, Truck } from "lucide-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Leaf, Award, Truck, ArrowRight } from "lucide-react"; // FIXED: Added ArrowRight import here
 
 import MainImage from "../../assets/image/banner-img.jpg";
 import SmallImage from "../../assets/image/banner-img.jpg";
@@ -14,7 +16,6 @@ const About = () => {
       desc: "We source locally and sustainably. Every ingredient is hand-picked daily for maximum freshness.",
       color: "bg-red-100 text-red-600",
     },
-
     {
       id: 2,
       icon: <Award size={18} />,
@@ -22,7 +23,6 @@ const About = () => {
       desc: "Our signature recipes have won national culinary awards 5 years in a row.",
       color: "bg-yellow-100 text-yellow-600",
     },
-
     {
       id: 3,
       icon: <Truck size={18} />,
@@ -37,10 +37,8 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-5 lg:px-5">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* ================= LEFT ================= */}
-
           <div className="relative">
             {/* Main Image */}
-
             <img
               src={MainImage}
               alt="Restaurant"
@@ -48,10 +46,8 @@ const About = () => {
             />
 
             {/* Experience Box */}
-
             <div className="absolute animate-float top-8 -left-4 lg:-left-3 bg-[#ef4423] text-white rounded-2xl px-5 py-4 shadow-2xl">
               <h2 className="text-2xl font-black">12+</h2>
-
               <p className="text-xs mt-2 leading-6">
                 Years of
                 <br />
@@ -60,7 +56,6 @@ const About = () => {
             </div>
 
             {/* Small Image */}
-
             <img
               src={SmallImage}
               alt="Food"
@@ -69,7 +64,6 @@ const About = () => {
           </div>
 
           {/* ================= RIGHT ================= */}
-
           <div className="text-center lg:text-left">
             <h5 className="text-[#ef4423] font-play text-1xl mb-2">
               Our Story
@@ -92,7 +86,7 @@ const About = () => {
             </p>
 
             {/* Features */}
-            <div className="mt-4 ">
+            <div className="mt-4">
               {features.map((feature) => (
                 <div
                   key={feature.id}
@@ -110,7 +104,6 @@ const About = () => {
                     <h3 className="text-lg font-bold text-gray-800">
                       {feature.title}
                     </h3>
-
                     <p className="text-gray-500 mt-1 text-sm leading-7">
                       {feature.desc}
                     </p>
@@ -119,12 +112,15 @@ const About = () => {
               ))}
             </div>
 
-            {/* Button */}
-            <div className="mt-0 flex justify-center lg:justify-start">
-              <button className="bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-5 py-4 rounded-full shadow-xl hover:shadow-2xl flex items-center text-sm gap-3 font-semibold">
-                <FaUtensils />
-                View Full Menu
-              </button>
+            {/* Button (FIXED Link path) */}
+            <div className="mt-4 flex justify-center lg:justify-start">
+              <Link 
+                to="/menu"
+                className="bg-[#ef4423] hover:bg-[#db3a1c] transition duration-300 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-3 font-semibold shadow-lg w-full text-xs sm:w-auto text-center"
+              >
+                <span>Explore Menu</span>
+                <ArrowRight size={18} />
+              </Link>
             </div>
           </div>
         </div>

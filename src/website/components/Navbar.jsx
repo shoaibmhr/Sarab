@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
-
 import { FaUtensils } from "react-icons/fa";
 
 const Navbar = () => {
@@ -14,15 +14,6 @@ const Navbar = () => {
     { name: "Blog", id: "blog" },
     { name: "Contact", id: "contact" },
   ];
-  // const navLinks = [
-  //   "Home",
-  //   "About",
-  //   "Menu",
-  //   "Chefs",
-  //   "Reservation",
-  //   "Reviews",
-  //   "Contact",
-  // ];
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -47,7 +38,6 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-
           <ul className="hidden lg:flex items-center gap-10 font-bold text-xs text-gray-700">
             {navLinks.map((item) => (
               <li key={item.id} className="relative group cursor-pointer">
@@ -71,26 +61,27 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Right */}
-
+          {/* Right (Desktop Button Fixed) */}
           <div className="hidden lg:flex items-center gap-6">
             <Search className="cursor-pointer hover:text-red-600" size={15} />
 
-            <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold px-4 py-3 rounded-xl shadow-lg hover:scale-105 duration-300 text-xs flex items-center gap-2">
+            {/* FIXED: Wrap desktop button in Link */}
+            <Link 
+              to="/checkout" 
+              className="bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold px-4 py-3 rounded-xl shadow-lg hover:scale-105 duration-300 text-xs flex items-center gap-2"
+            >
               <ShoppingBag size={15} />
-              Order Now
-            </button>
+              <span>Order Now</span>
+            </Link>
           </div>
 
           {/* Mobile Button */}
-
           <button onClick={() => setOpen(!open)} className="lg:hidden">
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
             open ? "max-h-[500px] pb-5" : "max-h-0"
@@ -115,10 +106,13 @@ const Navbar = () => {
             <div className="flex items-center gap-5 pt-3">
               <Search />
 
-              <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-xl flex items-center gap-2">
+              <Link 
+                to="/checkout"
+                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2 font-semibold shadow-lg hover:opacity-90 transition-all duration-300 w-full sm:w-auto text-center"
+              >
                 <ShoppingBag size={18} />
-                Order Now
-              </button>
+                <span>Order Now</span>
+              </Link>
             </div>
           </ul>
         </div>
