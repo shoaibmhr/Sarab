@@ -1,81 +1,63 @@
+// src/admin/components/reports/RevenueTrendChart.jsx
 import {
-  Area,
   AreaChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
+  Area,
   XAxis,
   YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
-import { revenueTrendData } from "../../constants/reportsData";
-
-const RevenueTrendChart = () => {
+const RevenueTrendChart = ({ data }) => {
   return (
-    <div className="h-[320px] w-full">
-      <ResponsiveContainer width="100%" height="100%">
-        <AreaChart
-          data={revenueTrendData}
-          margin={{
-            top: 10,
-            right: 10,
-            left: -20,
-            bottom: 0,
-          }}
-        >
-          <defs>
-            <linearGradient id="revenueGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#f97316" stopOpacity={0.45} />
+    <div className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm sm:p-5">
+      <h3 className="text-base font-bold text-slate-800">Revenue Trend</h3>
+      <p className="text-sm text-slate-500">Revenue aur orders ka overview</p>
 
-              <stop offset="100%" stopColor="#f97316" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-
-          <CartesianGrid
-            strokeDasharray="3 3"
-            vertical={false}
-            stroke="#e2e8f0"
-          />
-
-          <XAxis
-            dataKey="month"
-            tickLine={false}
-            axisLine={false}
-            tick={{
-              fontSize: 12,
-              fill: "#64748b",
-            }}
-          />
-
-          <YAxis
-            tickLine={false}
-            axisLine={false}
-            tick={{
-              fontSize: 12,
-              fill: "#64748b",
-            }}
-          />
-
-          <Tooltip
-            contentStyle={{
-              borderRadius: "12px",
-              border: "none",
-              boxShadow: "0 10px 30px rgba(0,0,0,.12)",
-            }}
-          />
-
-          <Area
-            type="monotone"
-            dataKey="revenue"
-            stroke="#f97316"
-            strokeWidth={3}
-            fill="url(#revenueGradient)"
-            activeDot={{
-              r: 6,
-            }}
-          />
-        </AreaChart>
-      </ResponsiveContainer>
+      <div className="mt-5 h-[240px] w-full">
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart data={data}>
+            <defs>
+              <linearGradient id="reportGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#ea580c" stopOpacity={0.35} />
+                <stop offset="95%" stopColor="#ea580c" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <CartesianGrid
+              strokeDasharray="3 3"
+              vertical={false}
+              stroke="#f1f5f9"
+            />
+            <XAxis
+              dataKey="period"
+              axisLine={false}
+              tickLine={false}
+              tick={{ fontSize: 11, fill: "#94a3b8" }}
+            />
+            <YAxis
+              axisLine={false}
+              tickLine={false}
+              tick={{ fontSize: 11, fill: "#94a3b8" }}
+            />
+            <Tooltip
+              contentStyle={{
+                borderRadius: "12px",
+                border: "1px solid #f1f5f9",
+                fontSize: "13px",
+              }}
+              formatter={(value) => [`Rs ${value.toLocaleString()}`, "Revenue"]}
+            />
+            <Area
+              type="monotone"
+              dataKey="revenue"
+              stroke="#ea580c"
+              strokeWidth={2.5}
+              fill="url(#reportGradient)"
+            />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };
