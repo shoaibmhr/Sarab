@@ -85,9 +85,9 @@ const Customers = () => {
         {/* Page Header */}
 
         <div className="flex flex-col gap-2">
-          <h1 className="text-2xl font-bold text-slate-800">Customers</h1>
+          <h1 className="text-xl font-bold text-slate-800">Customers</h1>
 
-          <p className="text-sm text-slate-500">
+          <p className="text-xs text-slate-500">
             Manage all registered customers.
           </p>
         </div>
@@ -112,7 +112,7 @@ const Customers = () => {
 
         <div className="hidden overflow-hidden rounded-2xl border border-slate-200 bg-white lg:block">
           <div className="overflow-x-auto">
-            <table className="min-w-full">
+            <table className="min-w-full ">
               <thead className="bg-slate-50">
                 <tr>
                   <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-500">
@@ -159,7 +159,7 @@ const Customers = () => {
                       >
                         {/* Customer */}
 
-                        <td className="px-6 py-5">
+                        <td className="px-5 py-5 ">
                           <div className="flex items-center gap-4">
                             <img
                               src={customer.avatar}
@@ -190,7 +190,7 @@ const Customers = () => {
 
                         {/* Contact */}
 
-                        <td className="px-6 py-5">
+                        <td className="px-6 py-5 ">
                           <div>
                             <p className="text-sm font-medium text-slate-700">
                               {customer.phone}

@@ -84,7 +84,7 @@ const CustomerStatsCards = ({ customers }) => {
                   {card.title}
                 </p>
 
-                <h3 className="mt-2 text-2xl font-bold text-slate-800">
+                <h3 className="mt-2 text-1xl font-bold text-slate-800">
                   {card.value}
                 </h3>
               </div>
@@ -92,15 +92,15 @@ const CustomerStatsCards = ({ customers }) => {
               <div
                 className={`
                   flex
-                  h-11
-                  w-11
+                  h-9
+                  w-9
                   items-center
                   justify-center
                   rounded-xl
                   ${card.bg}
                 `}
               >
-                <Icon size={22} className={card.iconColor} />
+                <Icon size={19} className={card.iconColor} />
               </div>
             </div>
           </div>
