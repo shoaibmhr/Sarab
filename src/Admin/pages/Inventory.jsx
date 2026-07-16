@@ -65,7 +65,7 @@ const Inventory = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Total Items
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-1xl font-bold text-slate-800">
             {items.length}
           </h3>
         </div>
@@ -73,7 +73,7 @@ const Inventory = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-amber-500">
             Low Stock
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-1xl font-bold text-slate-800">
             {lowStockCount}
           </h3>
         </div>
@@ -81,7 +81,7 @@ const Inventory = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-red-500">
             Out of Stock
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-1xl font-bold text-slate-800">
             {outOfStockCount}
           </h3>
         </div>

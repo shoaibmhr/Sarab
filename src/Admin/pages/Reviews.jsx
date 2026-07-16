@@ -72,7 +72,7 @@ const Reviews = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Total Reviews
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-1xl font-bold text-slate-800">
             {reviews.length}
           </h3>
         </div>
@@ -81,7 +81,7 @@ const Reviews = () => {
             Average Rating
           </p>
           <div className="mt-1 flex items-center gap-1">
-            <h3 className="text-xl font-bold text-slate-800">
+            <h3 className="text-1xl font-bold text-slate-800">
               {averageRating}
             </h3>
             <Star size={16} className="fill-amber-400 text-amber-400" />
@@ -91,7 +91,7 @@ const Reviews = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-amber-500">
             Pending
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-1xl font-bold text-slate-800">
             {pendingCount}
           </h3>
         </div>

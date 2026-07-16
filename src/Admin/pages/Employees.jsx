@@ -80,7 +80,7 @@ const Employees = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Total Staff
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {employees.length}
           </h3>
         </div>
@@ -88,7 +88,7 @@ const Employees = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-green-600">
             Active
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {activeCount}
           </h3>
         </div>
@@ -96,7 +96,7 @@ const Employees = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Roles
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {employeeRoles.length - 1}
           </h3>
         </div>

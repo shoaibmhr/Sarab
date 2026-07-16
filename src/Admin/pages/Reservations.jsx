@@ -94,7 +94,7 @@ const Reservations = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Total Bookings
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {reservations.length}
           </h3>
         </div>
@@ -102,7 +102,7 @@ const Reservations = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-orange-500">
             Today
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {todayCount}
           </h3>
         </div>
@@ -110,7 +110,7 @@ const Reservations = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-green-600">
             Confirmed
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {confirmedCount}
           </h3>
         </div>

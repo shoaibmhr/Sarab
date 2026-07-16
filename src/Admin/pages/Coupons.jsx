@@ -78,7 +78,7 @@ const Coupons = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Total Coupons
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {coupons.length}
           </h3>
         </div>
@@ -86,7 +86,7 @@ const Coupons = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-green-600">
             Active
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {activeCount}
           </h3>
         </div>
@@ -94,7 +94,7 @@ const Coupons = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Total Redemptions
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {coupons.reduce((sum, c) => sum + c.usedCount, 0)}
           </h3>
         </div>

@@ -84,7 +84,7 @@ const DeliveryBoys = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Total Riders
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {riders.length}
           </h3>
         </div>
@@ -92,7 +92,7 @@ const DeliveryBoys = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-green-600">
             Available
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {availableCount}
           </h3>
         </div>
@@ -100,7 +100,7 @@ const DeliveryBoys = () => {
           <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">
             On Delivery
           </p>
-          <h3 className="mt-1 text-xl font-bold text-slate-800">
+          <h3 className="mt-1 text-sm font-bold text-slate-800">
             {onDeliveryCount}
           </h3>
         </div>
