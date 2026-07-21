@@ -1,5 +1,4 @@
 // src/admin/components/customers/CustomerDetailsModal.jsx
-
 import {
   X,
   Mail,
@@ -21,40 +20,25 @@ const CustomerDetailsModal = ({ customer, open, onClose }) => {
   return (
     <div
       className="
-        fixed
-        inset-0
-        z-50
-        flex
-        items-center
-        justify-center
-       bg-black/40 backdrop-blur-[2px]
-        p-4
+        fixed inset-0 z-50 flex items-center justify-center
+        bg-black/40 backdrop-blur-[2px] p-4
       "
+      onClick={onClose}
     >
       {/* Modal */}
-
       <div
+        onClick={(e) => e.stopPropagation()}
         className="
-          relative
-          w-full
-          max-w-2xl
-          overflow-hidden
-          bg-white
-          rounded-2xl
-shadow-xl
-border
-border-slate-200
-      
+          relative w-full max-w-2xl overflow-hidden rounded-2xl border
+          border-slate-100 bg-white shadow-xl
         "
       >
         {/* Header */}
-
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-100 bg-white px-5 py-4">
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-100 bg-white px-4 py-3.5">
           <div>
-            <h2 className="text-lg font-bold text-slate-800">
+            <h2 className="text-base font-bold text-slate-800">
               Customer Details
             </h2>
-
             <p className="text-xs text-slate-500">
               Complete customer information
             </p>
@@ -62,106 +46,76 @@ border-slate-200
 
           <button
             onClick={onClose}
-            className="
-             flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 hover:bg-slate-100 hover:text-red-500
-            "
+            className="rounded-lg p-1.5 text-slate-400 transition-all duration-300 hover:bg-slate-100 hover:text-red-500"
           >
-            <X size={20} />
+            <X size={18} />
           </button>
         </div>
 
         {/* Body */}
-
-        <div className="max-h-[65vh] overflow-y-auto p-5">
+        <div className="max-h-[65vh] overflow-y-auto p-4">
           {/* Profile */}
-
-          <div className="flex items-start gap-4 sm:flex-row lg:items-center">
+          <div className="flex items-start gap-3.5 sm:flex-row lg:items-center">
             <img
               src={customer.avatar}
               alt={customer.name}
-              className="
-                h-20
-                w-20
-                rounded-full
-                border
-                border-slate-200
-                object-cover
-              "
+              className="h-16 w-16 flex-shrink-0 rounded-full border border-slate-100 object-cover"
             />
 
-            <div className="flex-1">
-              <div className="flex flex-wrap items-center gap-3">
-                <h2 className="text-xl font-bold text-slate-800">
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <h2 className="text-lg font-bold text-slate-800">
                   {customer.name}
                 </h2>
-
                 <CustomerStatusBadge status={customer.status} />
 
                 {isVip && (
-                  <span
-                    className="
-                      flex
-                      items-center
-                      gap-1
-                      rounded-full
-                      bg-yellow-100
-                      px-3
-                      py-1
-                      text-xs
-                      font-semibold
-                      text-yellow-700
-                    "
-                  >
-                    <Crown size={14} />
+                  <span className="flex items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-600">
+                    <Crown size={13} />
                     VIP Customer
                   </span>
                 )}
               </div>
 
-              <div className="mt-5 grid gap-4 md:grid-cols-2">
-                <div className="flex items-center gap-3">
-                  <Mail size={18} className="text-orange-500" />
-
-                  <div>
+              <div className="mt-3.5 grid gap-3 md:grid-cols-2">
+                <div className="flex items-center gap-2.5">
+                  <Mail size={15} className="flex-shrink-0 text-orange-500" />
+                  <div className="min-w-0">
                     <p className="text-xs text-slate-500">Email</p>
-
-                    <p className="font-medium text-slate-700">
+                    <p className="truncate text-sm font-medium text-slate-700">
                       {customer.email}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <Phone size={18} className="text-orange-500" />
-
+                <div className="flex items-center gap-2.5">
+                  <Phone size={15} className="flex-shrink-0 text-orange-500" />
                   <div>
                     <p className="text-xs text-slate-500">Phone</p>
-
-                    <p className="font-medium text-slate-700">
+                    <p className="text-sm font-medium text-slate-700">
                       {customer.phone}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <CalendarDays size={18} className="text-orange-500" />
-
+                <div className="flex items-center gap-2.5">
+                  <CalendarDays
+                    size={15}
+                    className="flex-shrink-0 text-orange-500"
+                  />
                   <div>
                     <p className="text-xs text-slate-500">Joined</p>
-
-                    <p className="font-medium text-slate-700">
+                    <p className="text-sm font-medium text-slate-700">
                       {customer.joinDate}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <MapPin size={18} className="text-orange-500" />
-
-                  <div>
+                <div className="flex items-center gap-2.5">
+                  <MapPin size={15} className="flex-shrink-0 text-orange-500" />
+                  <div className="min-w-0">
                     <p className="text-xs text-slate-500">Address</p>
-
-                    <p className="font-medium text-slate-700">
+                    <p className="truncate text-sm font-medium text-slate-700">
                       {customer.address}
                     </p>
                   </div>
@@ -171,50 +125,42 @@ border-slate-200
           </div>
 
           {/* Stats */}
-
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <div className="rounded-xl border border-slate-100 bg-slate-50 p-4">
-              <div className="flex items-center gap-3">
-                <ShoppingBag className="text-orange-500" />
-
+          <div className="mt-5 grid gap-3 md:grid-cols-3">
+            <div className="rounded-xl border border-slate-100 bg-slate-50 p-3.5">
+              <div className="flex items-center gap-2.5">
+                <ShoppingBag size={18} className="text-orange-500" />
                 <div>
-                  <p className="text-sm text-slate-500">Total Orders</p>
-
-                  <h3 className="text-xl font-bold">{customer.totalOrders}</h3>
+                  <p className="text-xs text-slate-500">Total Orders</p>
+                  <h3 className="text-lg font-bold text-slate-800">
+                    {customer.totalOrders}
+                  </h3>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 p-5">
-              <div className="flex items-center gap-3">
-                <Wallet className="text-green-600" />
-
+            <div className="rounded-xl border border-slate-100 bg-slate-50 p-3.5">
+              <div className="flex items-center gap-2.5">
+                <Wallet size={18} className="text-green-600" />
                 <div>
-                  <p className="text-sm text-slate-500">Total Spending</p>
-
-                  <h3 className="text-2xl font-bold text-green-600">
+                  <p className="text-xs text-slate-500">Total Spending</p>
+                  <h3 className="text-lg font-bold text-green-600">
                     Rs {customer.totalSpent.toLocaleString()}
                   </h3>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 p-5">
-              <div>
-                <p className="text-sm text-slate-500">Last Order</p>
-
-                <h3 className="mt-2 text-xl font-bold text-slate-700">
-                  {customer.lastOrder}
-                </h3>
-              </div>
+            <div className="rounded-xl border border-slate-100 bg-slate-50 p-3.5">
+              <p className="text-xs text-slate-500">Last Order</p>
+              <h3 className="mt-1 text-lg font-bold text-slate-700">
+                {customer.lastOrder}
+              </h3>
             </div>
           </div>
-          {/* Recent Orders */}
 
-          <div className="mt-6 space-y-3">
-            <h3 className="text-base font-semibold text-slate-800">
-              Recent Orders
-            </h3>
+          {/* Recent Orders */}
+          <div className="mt-4 space-y-2.5">
+            <h3 className="text-sm font-bold text-slate-800">Recent Orders</h3>
 
             {customer.recentOrders.map((order) => (
               <div
@@ -222,24 +168,25 @@ border-slate-200
                 className="flex items-center justify-between rounded-xl border border-slate-100 bg-white p-3"
               >
                 <div>
-                  <h4 className="font-medium text-slate-800">{order.id}</h4>
-
+                  <h4 className="text-sm font-semibold text-slate-800">
+                    {order.id}
+                  </h4>
                   <p className="text-xs text-slate-500">
                     Rs {order.total.toLocaleString()}
                   </p>
                 </div>
 
                 <span
-                  className={`rounded-full px-3 py-1 text-xs font-semibold
-        ${
-          order.status === "Delivered"
-            ? "bg-green-100 text-green-700"
-            : order.status === "Preparing"
-              ? "bg-blue-100 text-blue-700"
-              : order.status === "Pending"
-                ? "bg-amber-100 text-amber-700"
-                : "bg-red-100 text-red-700"
-        }`}
+                  className={`rounded-full px-2.5 py-1 text-xs font-semibold
+                    ${
+                      order.status === "Delivered"
+                        ? "bg-green-50 text-green-600"
+                        : order.status === "Preparing"
+                          ? "bg-blue-50 text-blue-600"
+                          : order.status === "Pending"
+                            ? "bg-amber-50 text-amber-600"
+                            : "bg-red-50 text-red-600"
+                    }`}
                 >
                   {order.status}
                 </span>
@@ -248,14 +195,12 @@ border-slate-200
           </div>
 
           {/* Notes */}
-
-          <div className="mt-8">
-            <h3 className="mb-3 text-lg font-bold text-slate-800">
+          <div className="mt-5">
+            <h3 className="mb-2 text-sm font-bold text-slate-800">
               Customer Notes
             </h3>
-
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-              <p className="leading-7 text-slate-600">
+            <div className="rounded-xl border border-slate-100 bg-slate-50 p-3.5">
+              <p className="text-sm leading-relaxed text-slate-600">
                 {customer.notes || "No notes available."}
               </p>
             </div>
@@ -263,19 +208,12 @@ border-slate-200
         </div>
 
         {/* Footer */}
-
-        <div className="flex justify-end border-t border-slate-200 px-5 py-4">
+        <div className="flex justify-end border-t border-slate-100 px-4 py-3">
           <button
             onClick={onClose}
             className="
-              rounded-lg
-              bg-orange-500
-              px-6
-              py-2.5
-              font-semibold
-              text-white
-              transition
-              hover:bg-orange-600
+              rounded-xl bg-orange-600 px-4 py-2 text-sm font-semibold text-white
+              shadow-sm transition-all duration-300 hover:bg-orange-700
             "
           >
             Close

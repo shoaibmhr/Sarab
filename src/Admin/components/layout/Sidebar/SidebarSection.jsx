@@ -1,6 +1,6 @@
 import SidebarItem from "./SidebarItem";
 
-const SidebarSection = ({ title, items, collapsed = false }) => {
+const SidebarSection = ({ title, items, collapsed = false, onAction }) => {
   return (
     <div className="mb-5">
       {/* Section Title */}
@@ -24,11 +24,13 @@ px-2
       <div className="space-y-1">
         {items.map((item) => (
           <SidebarItem
-            key={item.path}
+            key={item.title}
             title={item.title}
             path={item.path}
             icon={item.icon}
             collapsed={collapsed}
+            action={item.action}
+            onAction={onAction}
           />
         ))}
       </div>

@@ -1,10 +1,30 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
 import SidebarLogo from "./SidebarLogo";
 import SidebarSection from "./SidebarSection";
 import SidebarFooter from "./SidebarFooter";
+import ConfirmLogoutModal from "../../common/ConfirmLogoutModal";
 import { sidebarData } from "../../../constants/sidebarData";
 
 const MobileSidebar = ({ isOpen, setIsSidebarOpen }) => {
+  const [isLogoutOpen, setIsLogoutOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleAction = (action) => {
+    if (action === "logout") {
+      setIsLogoutOpen(true);
+    }
+  };
+
+  const handleConfirmLogout = () => {
+    // ⚠️ Abhi placeholder — backend banne par yahan real logout API call hogi
+    localStorage.removeItem("adminToken");
+    setIsLogoutOpen(false);
+    setIsSidebarOpen(false);
+    navigate("/admin/login");
+  };
+
   return (
     <>
       {/* Overlay */}
@@ -55,6 +75,7 @@ duration-300
               key={section.title}
               title={section.title}
               items={section.items}
+              onAction={handleAction}
             />
           ))}
         </div>
@@ -62,6 +83,13 @@ duration-300
         {/* Footer */}
         <SidebarFooter collapsed={false} />
       </aside>
+
+      {/* Logout Confirmation */}
+      <ConfirmLogoutModal
+        isOpen={isLogoutOpen}
+        onClose={() => setIsLogoutOpen(false)}
+        onConfirm={handleConfirmLogout}
+      />
     </>
   );
 };

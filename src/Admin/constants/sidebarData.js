@@ -195,7 +195,7 @@ export const sidebarData = [
       {
         title: "Logout",
         icon: LogOut,
-        path: "/admin/logout",
+        action: "logout",
       },
     ],
   },
