@@ -1,13 +1,10 @@
 // src/admin/pages/Orders.jsx
 import { useState, useMemo } from "react";
 import { PackageSearch, Eye } from "lucide-react";
-
 import OrdersToolbar from "../components/orders/OrdersToolbar";
 import OrderStatusBadge from "../components/orders/OrderStatusBadge";
 import OrderDetailsModal from "../components/orders/OrderDetailsModal";
-
 import { ordersData, orderStatuses } from "../constants/ordersData";
-
 const Orders = () => {
   const [orders, setOrders] = useState(ordersData);
   const [searchTerm, setSearchTerm] = useState("");

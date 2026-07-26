@@ -25,16 +25,16 @@ const StatsCard = ({
       className="
         flex flex-col justify-between
         rounded-2xl border border-slate-100 bg-white
-        p-4 shadow-sm
+        p-2 shadow-sm
         transition-all duration-300
         hover:-translate-y-0.5 hover:shadow-md
       "
     >
       <div className="flex items-center justify-between">
         <div
-          className={`flex h-9 w-9 items-center justify-center rounded-xl ${colors.bg}`}
+          className={`flex h-8 w-8 items-center justify-center rounded-xl ${colors.bg}`}
         >
-          <Icon size={18} className={colors.icon} />
+          <Icon size={15} className={colors.icon} />
         </div>
 
         {change && (
@@ -58,7 +58,7 @@ const StatsCard = ({
         <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
           {label}
         </p>
-        <h3 className="mt-1 text-xl font-bold text-slate-800">{value}</h3>
+        <h3 className="mt-1 text-sx font-bold text-slate-800">{value}</h3>
       </div>
     </div>
   );

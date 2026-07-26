@@ -1,36 +1,66 @@
-import React from 'react';
-import { FaUtensils } from 'react-icons/fa';
+// src/auth/components/AuthBanner.jsx
+import { FaUtensils } from "react-icons/fa";
+import { CheckCircle2 } from "lucide-react";
+
+const features = [
+  "Real-time order management",
+  "Complete inventory tracking",
+  "Detailed sales analytics",
+  "Multi-role staff access",
+];
 
 const AuthBanner = () => {
   return (
-    <div className="text-center max-w-lg space-y-6">
-      {/* Brand Icon or Logo */}
-      <div className="w-20 h-20 bg-[#ef4423] text-white rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-[#ef4423]/20 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-        <FaUtensils className="text-4xl" />
+    <div
+      className="
+        relative hidden w-[42%] flex-col justify-between overflow-hidden
+        bg-[#2B120D] p-8 text-white md:flex
+      "
+    >
+      {/* Decorative gradient blobs */}
+      <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-orange-600/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-20 -left-10 h-72 w-72 rounded-full bg-orange-600/10 blur-3xl" />
+
+      {/* Logo */}
+      <div className="relative flex items-center gap-2.5">
+        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-600">
+          <FaUtensils size={18} />
+        </div>
+        <div>
+          <h1 className="text-base font-bold leading-none">Sarab</h1>
+          <p className="mt-0.5 text-xs text-orange-200">
+            Restaurant Management
+          </p>
+        </div>
       </div>
 
-      {/* Brand Name & Headline */}
-      <div className="space-y-3">
-        <h1 className="text-4xl xl:text-5xl font-black text-gray-900 tracking-tight">
-          Savor <span className="text-[#ef4423]">Control.</span>
-        </h1>
-        <p className="text-gray-500 text-base xl:text-lg leading-relaxed">
-          Manage orders, customize your menu, and track restaurant analytics in real-time.
+      {/* Middle content */}
+      <div className="relative">
+        <h2 className="text-2xl font-bold leading-snug">
+          Manage your restaurant, all in one place.
+        </h2>
+        <p className="mt-3 text-sm text-orange-100/80">
+          Orders, inventory, staff, aur customers — sab kuch ek professional
+          dashboard se control karein.
         </p>
+
+        <div className="mt-6 space-y-3">
+          {features.map((feature) => (
+            <div key={feature} className="flex items-center gap-2.5">
+              <CheckCircle2
+                size={16}
+                className="flex-shrink-0 text-orange-400"
+              />
+              <span className="text-sm text-orange-50">{feature}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Subtle Stats Card to make it look Pro */}
-      <div className="bg-white p-6 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-50/50 flex justify-around text-center">
-        <div>
-          <h3 className="text-2xl font-extrabold text-gray-800">99.9%</h3>
-          <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">Uptime</p>
-        </div>
-        <div className="w-px bg-gray-100"></div>
-        <div>
-          <h3 className="text-2xl font-extrabold text-gray-800">&lt; 2s</h3>
-          <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">Sync Speed</p>
-        </div>
-      </div>
+      {/* Footer */}
+      <p className="relative text-xs text-orange-200/60">
+        © 2026 Sarab Restaurant. All rights reserved.
+      </p>
     </div>
   );
 };

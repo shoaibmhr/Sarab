@@ -1,25 +1,40 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import AuthBanner from './AuthBanner';
+// src/auth/components/AuthLayout.jsx
+import { Outlet, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import AuthBanner from "./AuthBanner";
 
 const AuthLayout = () => {
+  const location = useLocation();
+
   return (
-    // min-h-screen aur overflow-hidden se scrollbar gayab ho jayega
-    <div className="min-h-screen w-full flex flex-col lg:flex-row overflow-hidden bg-gray-50">
-      
-      {/* LEFT SECTION (50% Width on Large Screens) */}
-      <div className="hidden lg:flex lg:w-1/2 h-full min-h-screen bg-[#ef4423]/5 items-center justify-center p-12 border-r border-gray-100">
+    <div className="flex min-h-screen items-center justify-center bg-[#FFF8F2] p-4 sm:p-6">
+      <motion.div
+        layout
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+        className="
+          flex w-full max-w-4xl overflow-hidden rounded-3xl
+          border border-slate-100 bg-white shadow-xl
+        "
+      >
+        {/* Left Panel — Banner */}
         <AuthBanner />
-      </div>
 
-      {/* RIGHT SECTION (50% Width on Large Screens) */}
-      <div className="w-full lg:w-1/2 min-h-screen flex items-center justify-center p-6 md:p-12 bg-white lg:bg-gray-50/30 overflow-y-auto">
-        {/* Yahan aapka LoginForm ya RegisterForm render hoga */}
-        <div className="w-full max-w-md flex justify-center items-center">
-          <Outlet />
+        {/* Right Panel — Form (yahan smooth transition hoga) */}
+        <div className="flex w-full flex-1 items-center justify-center overflow-hidden p-6 sm:p-10">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0, x: 12 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -12 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              className="w-full max-w-sm"
+            >
+              <Outlet />
+            </motion.div>
+          </AnimatePresence>
         </div>
-      </div>
-
+      </motion.div>
     </div>
   );
 };
