@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 import { FaUtensils } from "react-icons/fa";
 
@@ -10,9 +10,13 @@ import Pizza from "../../assets/image/pizza.jpg";
 import Chicken from "../../assets/image/4.jpg";
 import Wraps from "../../assets/image/5.jpg";
 import Dessert from "../../assets/image/6.jpg";
+import { Link } from "react-router-dom";
+import { useCart } from "../context/useCart";
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [addedItems, setAddedItems] = useState({});
+  const { addToCart } = useCart();
 
   const categories = ["All", "Burger", "Pizza", "Chicken", "Wrap", "Dessert"];
 
@@ -85,6 +89,22 @@ const Menu = () => {
           (food) =>
             food.category.toLowerCase() === activeCategory.toLowerCase(),
         );
+
+  // "+" button click hone par cart mein add karta hai
+  const handleAddToCart = (food) => {
+    addToCart({
+      id: food.id,
+      name: food.title,
+      price: parseFloat(food.price.replace("$", "")),
+      image: food.image,
+    });
+
+    // 1.2 second ke liye "✓" dikhao, phir wapas "+"
+    setAddedItems((prev) => ({ ...prev, [food.id]: true }));
+    setTimeout(() => {
+      setAddedItems((prev) => ({ ...prev, [food.id]: false }));
+    }, 1200);
+  };
 
   return (
     <section id="menu" className="bg-[#fdf8f2] py-13">
@@ -257,19 +277,26 @@ const Menu = () => {
                   </div>
 
                   <button
-                    className="
+                    onClick={() => handleAddToCart(food)}
+                    className={`
                   w-11 
                   h-11 
                   rounded-full 
-                  bg-[#ef4423] 
                   text-white 
                   text-xl 
-                  hover:rotate-90 
                   transition-all 
                   duration-300
-                  "
+                  ${
+                    addedItems[food.id]
+                      ? "bg-green-600"
+                      : "bg-[#ef4423] hover:rotate-90"
+                  }
+                  `}
                   >
-                    +
+                    <FontAwesomeIcon
+                      icon={addedItems[food.id] ? faCheck : undefined}
+                    />
+                    {!addedItems[food.id] && "+"}
                   </button>
                 </div>
               </div>
@@ -280,9 +307,12 @@ const Menu = () => {
         {/* Button */}
 
         <div className="mt-10 flex justify-center">
-          <button className="flex bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl items-center gap-3 font-semibold">
+          <Link
+            to="/menu"
+            className="flex bg-[#ef4423] hover:bg-[#d8391d] transition-all duration-300 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl items-center gap-3 font-semibold"
+          >
             <FaUtensils /> View Full Menu
-          </button>
+          </Link>
         </div>
       </div>
     </section>

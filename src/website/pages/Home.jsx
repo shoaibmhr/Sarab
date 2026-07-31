@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+
 import Hero from "../components/Hero";
 // import Marquee from "../components/Marquee";
 import Category from "../components/Category";
@@ -14,7 +14,6 @@ import Reservation from "../components/Reservation";
 import Blog from "../components/Blog";
 import NewsLetter from "../components/NewsLetter";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer"
 
 
 
@@ -23,7 +22,6 @@ import Footer from "../components/Footer"
 const Home = () => {
   return (
     <>
-    <Navbar/>
       <Hero />
       {/* <Marquee /> */}
       <Category />
@@ -39,10 +37,7 @@ const Home = () => {
       <Blog/>
       <NewsLetter/>
       <Contact/>
-      <Footer />
       
-
-
     </>
   );
 };

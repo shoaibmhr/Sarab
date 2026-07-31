@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import { FaUtensils } from "react-icons/fa";
+import CartIcon from "./cart/CartIcon";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -64,10 +65,12 @@ const Navbar = () => {
           {/* Right (Desktop Button Fixed) */}
           <div className="hidden lg:flex items-center gap-6">
             <Search className="cursor-pointer hover:text-red-600" size={15} />
+            {/* Cart Icon (badge count + drawer opener) */}
+            <CartIcon />
 
             {/* FIXED: Wrap desktop button in Link */}
-            <Link 
-              to="/checkout" 
+            <Link
+              to="/checkout"
               className="bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold px-4 py-3 rounded-xl shadow-lg hover:scale-105 duration-300 text-xs flex items-center gap-2"
             >
               <ShoppingBag size={15} />
@@ -105,8 +108,9 @@ const Navbar = () => {
 
             <div className="flex items-center gap-5 pt-3">
               <Search />
+              <CartIcon />
 
-              <Link 
+              <Link
                 to="/checkout"
                 className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2 font-semibold shadow-lg hover:opacity-90 transition-all duration-300 w-full sm:w-auto text-center"
               >
