@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import { FaUtensils } from "react-icons/fa";
 import CartIcon from "./cart/CartIcon";
+import SearchModal from "./search/SearchModal";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", id: "home" },
@@ -64,8 +66,9 @@ const Navbar = () => {
 
           {/* Right (Desktop Button Fixed) */}
           <div className="hidden lg:flex items-center gap-6">
-            <Search className="cursor-pointer hover:text-red-600" size={15} />
-            {/* Cart Icon (badge count + drawer opener) */}
+            <button onClick={() => setIsSearchOpen(true)}>
+              <Search className="cursor-pointer hover:text-red-600" size={15} />
+            </button>
             <CartIcon />
 
             {/* FIXED: Wrap desktop button in Link */}
@@ -107,7 +110,9 @@ const Navbar = () => {
             ))}
 
             <div className="flex items-center gap-5 pt-3">
-              <Search />
+              <button onClick={() => setIsSearchOpen(true)}>
+                <Search />
+              </button>
               <CartIcon />
 
               <Link
@@ -121,6 +126,11 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+      <SearchModal
+        key={isSearchOpen ? "open" : "closed"}
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+      />
     </nav>
   );
 };
