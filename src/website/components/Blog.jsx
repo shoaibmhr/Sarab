@@ -36,14 +36,16 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="bg-[#fdf8f2] py-15">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="blog" className="bg-[#fdf8f2] py-12 sm:py-14 lg:py-16">
+      <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
 
         <div className="text-center">
-          <p className="text-[#ef4423] text-1xl font-play">Our Blog</p>
+          <p className="text-[#ef4423] text-sm sm:text-base font-play">
+            Our Blog
+          </p>
 
-          <h2 className="text-2xl lg:text-4xl font-bold font-playfair mt-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-playfair mt-3">
             Latest Food <span className="text-[#ef4423]">Articles</span>
           </h2>
 
@@ -52,7 +54,7 @@ const Blog = () => {
 
         {/* Blog Cards */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-13">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-10 sm:mt-12 lg:mt-14">
           {foods.map((food) => (
             <div
               key={food.id}
@@ -61,13 +63,13 @@ const Blog = () => {
               {/* Image */}
 
               <div className="relative overflow-hidden">
-                <img
+                <img loading="lazy"
                   src={food.image}
                   alt={food.title}
-                  className="w-full h-50 object-cover group-hover:scale-110 transition duration-500"
+                  className="w-full h-52 sm:h-56 lg:h-60 object-cover group-hover:scale-110 transition duration-500"
                 />
 
-                <span className="absolute top-5 left-5 bg-[#ef4423] text-white px-2 py-2 rounded-full text-sm font-semibold">
+                <span className="absolute top-5 left-5 bg-[#ef4423] text-white px-3 py-1.5 text-xs sm:text-sm rounded-full  font-semibold">
                   {food.badge}
                 </span>
               </div>
@@ -79,14 +81,14 @@ const Blog = () => {
                   {food.category}
                 </p>
 
-                <h3 className="text-l font-semibold mt-2 leading-snug text-gray-900">
+                <h3 className="text-lg sm:text-xl font-semibold mt-2 leading-snug text-gray-900">
                   {food.title}
                 </h3>
 
-                <div className="flex items-center gap-6 mt-3 text-gray-500">
+                <div className="flex flex-wrap items-center gap-4 text-sm sm:text-base mt-3 text-gray-500">
                   <div className="flex items-center gap-2">
                     <FaUser className="text-[#ef4423] text-md" />
-                    <span>{food.author}</span>
+                    <span className="text-sm">{food.author}</span>
                   </div>
 
                   <div className="flex items-center gap-2">
@@ -95,7 +97,7 @@ const Blog = () => {
                   </div>
                 </div>
 
-                <button className="mt-5 text-[#ef4423] font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                <button className="mt-5 text-[#ef4423] font-bold flex items-center gap-2 hover:gap-3 transition-all">
                   Read More
                   <FaArrowRight />
                 </button>
