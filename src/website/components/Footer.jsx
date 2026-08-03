@@ -9,7 +9,6 @@ import {
   FaEnvelope,
   FaClock,
   FaChevronRight,
-  FaHeart,
 } from "react-icons/fa";
 
 const footerLinks = [
@@ -25,11 +24,11 @@ const Footer = () => {
   return (
     <footer className="bg-[#181818] text-gray-400">
       {/* Top Footer */}
-      <div className="max-w-7xl mx-auto px-3 py-5">
+      <div className="max-w-7xl mx-auto px-4 py-5 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo */}
-          <div>
-            <h2 className="text-4xl font-bold text-white">
+          <div className="text-center md:text-start">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">
               Sara<span className="text-[#ef4423]">b</span>
             </h2>
 
@@ -38,7 +37,7 @@ const Footer = () => {
               and affordable experience. Every meal crafted with love.
             </p>
 
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-3 mt-6 justify-center md:justify-start">
               {[
                 <FaFacebookF />,
                 <FaInstagram />,
@@ -168,8 +167,8 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs sm:text-sm">
             © 2026{" "}
             <span className="text-[#ef4423] font-semibold">
               Sarab Restaurant

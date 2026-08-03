@@ -1,5 +1,4 @@
-import React from "react";
-import { Clock3, Phone, Users, MapPin } from "lucide-react";
+import { Phone, Users, MapPin, Clock1 } from "lucide-react";
 
 import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa6";
 
@@ -7,13 +6,13 @@ const Reservation = () => {
   return (
     <section
       id="contact"
-      className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-20 px-5"
+      className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-13 sm:py-16 lg:py-20 px-5"
     >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
 
         <div className="text-center mb-14">
-          <p className="text-[#d62828] text-1xl font-play font-medium">
+          <p className="text-[#d62828] text-sm sm:text-base font-play font-medium">
             Get In Touch
           </p>
 
@@ -22,7 +21,7 @@ const Reservation = () => {
           </h2>
           <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-4"></div>
 
-          <p className="text-gray-500 max-w-xl mx-auto mt-3 text-md leading-8">
+          <p className="text-gray-500 max-w-xl mx-auto mt-3 text-sm sm:text-base leading-8">
             Have a question, feedback, or want to plan a special event? We'd
             love to hear from you.
           </p>
@@ -30,7 +29,7 @@ const Reservation = () => {
 
         {/* Main Grid */}
 
-        <div className="grid lg:grid-cols-12 gap-8 mt-[-30px] items-start">
+        <div className="grid lg:grid-cols-12 gap-8 lg:mt-[-30px] items-start">
           {/* Left Contact Card */}
 
           <div className="lg:col-span-4">
@@ -45,7 +44,7 @@ const Reservation = () => {
 
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 rounded-xl bg-[#d62828] flex items-center justify-center">
-                  <Clock3 size={22} />
+                  <MapPin size={22} />
                 </div>
 
                 <div>
@@ -95,7 +94,7 @@ const Reservation = () => {
 
               <div className="flex items-start gap-4 mb-5">
                 <div className="w-12 h-12 rounded-xl bg-[#d62828] flex items-center justify-center">
-                  <MapPin size={22} />
+                  <Clock1 size={22} />
                 </div>
 
                 <div>
@@ -215,7 +214,7 @@ const Reservation = () => {
 
                 {/* Button */}
 
-                <button className="w-50 h-13 rounded-full bg-[#d62828] text-white font-semibold tracking-wide shadow-[0_10px_30px_rgba(214,40,40,0.35)] hover:bg-red-700 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(214,40,40,0.45)] transition-all duration-300">
+                <button className="w-full sm:w-48 h-12 rounded-full bg-[#d62828] text-white font-semibold tracking-wide shadow-[0_10px_30px_rgba(214,40,40,0.35)] hover:bg-red-700 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(214,40,40,0.45)] transition-all duration-300">
                   Send Message
                 </button>
               </form>
