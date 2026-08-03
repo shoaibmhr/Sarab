@@ -1,10 +1,9 @@
-import React from "react";
 
 import { FaPaperPlane, FaLock } from "react-icons/fa";
 
 const Subscribe = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#cf1717] via-[#c91414] to-[#b80f0f] py-15 px-5">
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#cf1717] via-[#c91414] to-[#b80f0f] py-10 sm:py-12 lg:py-16 px-5">
       {/* Background Circles */}
 
       <div className="absolute inset-0 opacity-10">
@@ -23,7 +22,9 @@ const Subscribe = () => {
       <div className="relative max-w-5xl mx-auto text-center z-10">
         {/* Small Heading */}
 
-        <p className="text-[#ffd7d7]  text-1xl font-play">Stay Connected</p>
+        <p className="text-[#ffd7d7]  text-sm sm:text-base font-play">
+          Stay Connected
+        </p>
 
         {/* Main Heading */}
 
@@ -41,7 +42,7 @@ const Subscribe = () => {
         {/* Part 2 */}
 
         <div className="mt-12">
-          <div className="flex flex-col md:flex-row items-center justify-center  max-w-3xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-2 items-center justify-center  max-w-3xl mx-auto">
             {/* Email Input */}
 
             <div className="w-full lg:w-[65%]">
@@ -49,7 +50,7 @@ const Subscribe = () => {
                 type="email"
                 placeholder="Enter your email address..."
                 className="
-w-md
+w-full
 h-14
 rounded-full
 bg-white
@@ -74,7 +75,7 @@ shadow-[0_10px_30px_rgba(0,0,0,0.15)]
 
             <button
               className="
-w-md
+w-full
 lg:w-auto
 h-14
 px-8
