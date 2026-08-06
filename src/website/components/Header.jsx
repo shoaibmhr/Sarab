@@ -6,11 +6,11 @@ import { FaMotorcycle } from "react-icons/fa";
 const Header = () => {
   return (
     <header className="bg-[#111111] text-gray-300 border-b border-gray-800">
-      <div className="max-w-7xl mx-auto h-10 px-4 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto h-10 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Left */}
-        <div className="flex items-center gap-4 lg:gap-6 text-xs lg:text-xs">
+        <div className="flex items-center gap-4 lg:gap-6 text-xs">
           <div className="flex items-center gap-1.5">
-            <Phone size={12} className="text-orange-500" />
+            <Phone size={12} className="text-orange-500 whitespace-nowrap" />
             <span>+1 (800) 123-4567</span>
           </div>
 

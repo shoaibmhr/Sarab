@@ -20,8 +20,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-5">
-        <div className="flex items-center justify-between h-17">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white text-2xl">
@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
 
             <div>
-              <h1 className="text-2xl font-extrabold">
+              <h1 className="text-xl sm:text-2xl font-extrabold">
                 <span className="text-black">Sa</span>
                 <span className="text-red-600">rab</span>
               </h1>
@@ -41,7 +41,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center gap-10 font-bold text-xs text-gray-700">
+          <ul className="hidden md:flex items-center gap-6 lg:gap-10 font-bold text-xs text-gray-700">
             {navLinks.map((item) => (
               <li key={item.id} className="relative group cursor-pointer">
                 <a
@@ -65,8 +65,8 @@ const Navbar = () => {
           </ul>
 
           {/* Right (Desktop Button Fixed) */}
-          <div className="hidden lg:flex items-center gap-6">
-            <button onClick={() => setIsSearchOpen(true)}>
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
+            <button onClick={() => setIsSearchOpen(true)} className="p-2">
               <Search className="cursor-pointer hover:text-red-600" size={15} />
             </button>
             <CartIcon />
@@ -82,7 +82,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Button */}
-          <button onClick={() => setOpen(!open)} className="lg:hidden">
+          <button onClick={() => setOpen(!open)} className="md:hidden">
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -98,6 +98,7 @@ const Navbar = () => {
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
+                  onClick={() => setOpen(false)}
                   className={`block ${
                     item.name === "Home"
                       ? "text-red-600 border-l-4 border-red-600 pl-3"
@@ -110,7 +111,7 @@ const Navbar = () => {
             ))}
 
             <div className="flex items-center gap-5 pt-3">
-              <button onClick={() => setIsSearchOpen(true)}>
+              <button onClick={() => setIsSearchOpen(true)} className="p-2">
                 <Search />
               </button>
               <CartIcon />
