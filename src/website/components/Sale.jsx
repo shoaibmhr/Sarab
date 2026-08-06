@@ -61,8 +61,8 @@ const SaleBanner = () => {
       <div
         className="
       w-full 
-      max-w-6xl
-      
+      max-w-7xl
+      px-4 sm:px-6 lg:px-8 
       rounded-2xl
       p-8
       md:p-12

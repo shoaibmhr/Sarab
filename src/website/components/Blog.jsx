@@ -37,7 +37,7 @@ const Blog = () => {
 
   return (
     <section id="blog" className="bg-[#fdf8f2] py-12 sm:py-14 lg:py-16">
-      <div className="max-w-7xl mx-auto px-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Heading */}
 
         <div className="text-center">
@@ -63,7 +63,8 @@ const Blog = () => {
               {/* Image */}
 
               <div className="relative overflow-hidden">
-                <img loading="lazy"
+                <img
+                  loading="lazy"
                   src={food.image}
                   alt={food.title}
                   className="w-full h-52 sm:h-56 lg:h-60 object-cover group-hover:scale-110 transition duration-500"

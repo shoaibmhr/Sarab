@@ -24,7 +24,7 @@ const timeline = [
 const Timeline = () => {
   return (
     <section className="bg-[#faf5ef] py-10 px-5">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Heading */}
         <div className="text-center mb-20">
           <p className="text-[#e94f37] text-1xl mb-2">Our Journey</p>

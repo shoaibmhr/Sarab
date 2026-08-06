@@ -13,7 +13,7 @@ const OrderNow = () => {
 
   return (
     <div className="min-h-screen bg-gray-50/50 py-12 px-4 sm:px-6 lg:px-8 mt-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="max-w-7xl  mx-auto  grid grid-cols-1 lg:grid-cols-12 gap-8">
         
         {/* Left Side: Delivery Details (7 Columns) */}
         <div className="lg:col-span-7 bg-white p-6 md:p-8 rounded-3xl shadow-xl shadow-gray-100 border border-gray-100">

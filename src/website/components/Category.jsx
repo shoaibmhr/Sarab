@@ -53,7 +53,7 @@ const Category = () => {
 
   return (
     <section className="bg-[#fdf8f2] py-10">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Heading */}
 
         <div className="text-center">

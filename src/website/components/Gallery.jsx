@@ -69,7 +69,7 @@ const Card = ({ item }) => {
 
 const Gallery = () => {
   return (
-    <section className="max-w-7xl mx-auto px-5 py-20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-20">
       <p className="uppercase tracking-[4px] text-center text-[#ef4423] text-sm font-semibold">
         Curated World
       </p>

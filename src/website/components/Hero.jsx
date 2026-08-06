@@ -8,7 +8,7 @@ const Hero = () => {
     <section id="home" className="relative overflow-x-hidden bg-[#fdf7ef]">
       {/* Background Shapes */}
 
-      <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-15">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-16 lg:py-15">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* ================= LEFT ================= */}
 
@@ -42,9 +42,8 @@ const Hero = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mt-4">
-              
               {/* FIXED: Link target changed from "/about" to "/menu" */}
-              <Link 
+              <Link
                 to="/menu"
                 className="bg-[#ef4423] hover:bg-[#db3a1c] transition duration-300 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-3 font-semibold shadow-lg w-full text-xs sm:w-auto text-center"
               >

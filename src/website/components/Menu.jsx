@@ -108,7 +108,7 @@ const Menu = () => {
 
   return (
     <section id="menu" className="bg-[#fdf8f2] py-13">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Heading */}
 
         <div className="text-center">

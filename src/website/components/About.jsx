@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <section id="about" className="bg-white py-5">
-      <div className="max-w-7xl mx-auto px-5 lg:px-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* ================= LEFT ================= */}
           <div className="relative">
@@ -114,7 +114,7 @@ const About = () => {
 
             {/* Button (FIXED Link path) */}
             <div className="mt-4 flex justify-center lg:justify-start">
-              <Link 
+              <Link
                 to="/menu"
                 className="bg-[#ef4423] hover:bg-[#db3a1c] transition duration-300 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-3 font-semibold shadow-lg w-full text-xs sm:w-auto text-center"
               >
