@@ -1,11 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Leaf, Award, Truck, ArrowRight } from "lucide-react"; // FIXED: Added ArrowRight import here
-
 import MainImage from "../../assets/image/banner-img.jpg";
 import SmallImage from "../../assets/image/banner-img.jpg";
-
-import { FaUtensils } from "react-icons/fa";
 
 const About = () => {
   const features = [
@@ -35,18 +31,18 @@ const About = () => {
   return (
     <section id="about" className="bg-white py-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* ================= LEFT ================= */}
           <div className="relative">
             {/* Main Image */}
             <img
               src={MainImage}
               alt="Restaurant"
-              className="rounded-3xl w-full h-[430px] object-cover shadow-xl"
+              className="rounded-3xl w-full h-[320px] sm:h-[380px] lg:h-[430px] object-cover shadow-xl"
             />
 
             {/* Experience Box */}
-            <div className="absolute animate-float top-8 -left-4 lg:-left-3 bg-[#ef4423] text-white rounded-2xl px-5 py-4 shadow-2xl">
+            <div className="absolute animate-float top-6 left-2 lg:top-8 lg:-left-3  bg-[#ef4423] text-white rounded-2xl px-5 py-4 shadow-2xl">
               <h2 className="text-2xl font-black">12+</h2>
               <p className="text-xs mt-2 leading-6">
                 Years of
@@ -59,7 +55,7 @@ const About = () => {
             <img
               src={SmallImage}
               alt="Food"
-              className="absolute -bottom-8 right-5 lg:right-0 w-40 lg:w-48 rounded-2xl border-4 border-white shadow-2xl"
+              className="absolute -bottom-8 right-0 lg:right-0 w-40 lg:w-48 rounded-2xl border-4 border-white shadow-2xl"
             />
           </div>
 

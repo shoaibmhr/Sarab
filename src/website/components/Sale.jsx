@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Burger from "../../assets/image/banner-img.jpg";
+
 const SaleBanner = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
@@ -48,74 +49,71 @@ const SaleBanner = () => {
   return (
     <section
       className="
-    bg-[linear-gradient(135deg,#1a0000_0%,#2d0000_100%)]
-    w-full 
-    h-120
-    flex 
-    justify-center 
-    px-5 
-    py-5
-    bg-[#f5f5f5]
-    "
-    >
-      <div
-        className="
-      w-full 
-      max-w-7xl
-      px-4 sm:px-6 lg:px-8 
-      rounded-2xl
-      p-8
-      md:p-12
-      flex
-      items-center
-      justify-between
-      gap-10
-      overflow-hidden
-
-      flex-col
-      lg:flex-row
+      bg-[linear-gradient(135deg,#1a0000_0%,#2d0000_100%)]
+      w-full
+      py-12
+      sm:py-14
+      lg:py-18
       "
-      >
-        {/* LEFT SIDE */}
-
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className="
-        flex-1
-        text-white
-        text-center
-        lg:text-left
-        "
+          rounded-2xl
+          p-6
+          sm:p-8
+          md:p-10
+          lg:p-12
+          flex
+          flex-col
+          lg:flex-row
+          items-center
+          justify-between
+          gap-8
+          lg:gap-10
+          overflow-hidden
+          "
         >
-          <p
+          {/* LEFT SIDE */}
+
+          <div
             className="
+          flex-1
+          text-white
+          text-center
+          lg:text-left
+          "
+          >
+            <p
+              className="
           text-[#c5a66a]
           text-xs
           tracking-[3px]
           mb-3
           "
-          >
-            SPECIAL SALE • TODAY ONLY
-          </p>
+            >
+              SPECIAL SALE • TODAY ONLY
+            </p>
 
-          <h1
-            className="
-          text-3xl
-          md:text-5xl
+            <h1
+              className="
+          text-2xl
+          md:text-3xl
           lg:text-4xl
           leading-tight
           font-bold
           mb-5
           font-serif
           "
-          >
-            Get
-            <span className="text-[#b48b3c]"> 30% off Our</span>
-            <br />
-            <span className="text-[#b48b3c]"> Signature</span> Burger Meal.
-          </h1>
+            >
+              Get
+              <span className="text-[#b48b3c]"> 30% off Our</span>
+              <br />
+              <span className="text-[#b48b3c]"> Signature</span> Burger Meal.
+            </h1>
 
-          <p
-            className="
+            <p
+              className="
           text-[#b7bfd1]
           text-sm
           mb-5
@@ -123,43 +121,46 @@ const SaleBanner = () => {
           mx-auto
           lg:mx-0
           "
-          >
-            Don't miss our weekend special - grab our award-winning signature
-            burger combo with loaded fries.
-          </p>
+            >
+              Don't miss our weekend special - grab our award-winning signature
+              burger combo with loaded fries.
+            </p>
 
-          {/* TIMER */}
+            {/* TIMER */}
 
-          <div
-            className="
+            <div
+              className="
           flex
           justify-center
           lg:justify-start
-          gap-4
+          gap-3
+          sm:gap-4
           mb-8
           "
-          >
-            {[
-              {
-                value: timeLeft.hours,
-                label: "Hours",
-              },
-              {
-                value: timeLeft.minutes,
-                label: "Minutes",
-              },
-              {
-                value: timeLeft.seconds,
-                label: "Seconds",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="
-              w-20
-              h-20
-              md:w-[85px]
-              md:h-[85px]
+            >
+              {[
+                {
+                  value: timeLeft.hours,
+                  label: "Hours",
+                },
+                {
+                  value: timeLeft.minutes,
+                  label: "Minutes",
+                },
+                {
+                  value: timeLeft.seconds,
+                  label: "Seconds",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="
+              w-16
+              h-16
+              sm:w-20
+              sm:h-20
+              md:w-[75px]
+              md:h-[75px]
               rounded-xl
               border
               border-white/20
@@ -170,34 +171,34 @@ const SaleBanner = () => {
               bg-white/5
               backdrop-blur-md
               "
-              >
-                <h3
-                  className="
+                >
+                  <h3
+                    className="
                 text-2xl
                 font-bold
                 font-serif
                 "
-                >
-                  {String(item.value).padStart(2, "0")}
-                </h3>
+                  >
+                    {String(item.value).padStart(2, "0")}
+                  </h3>
 
-                <span
-                  className="
+                  <span
+                    className="
                 text-xs
                 text-[#aab3c5]
                 mt-1
                 "
-                >
-                  {item.label}
-                </span>
-              </div>
-            ))}
-          </div>
+                  >
+                    {item.label}
+                  </span>
+                </div>
+              ))}
+            </div>
 
-          {/* BUTTON */}
+            {/* BUTTON */}
 
-          <button
-            className="
+            <button
+              className="
           px-8
           py-3
           rounded-full
@@ -209,22 +210,22 @@ const SaleBanner = () => {
           hover:-translate-y-1
           hover:bg-[#efb556]
           "
-          >
-            Grab the Deal →
-          </button>
-        </div>
+            >
+              Grab the Deal →
+            </button>
+          </div>
 
-        {/* RIGHT SIDE */}
+          {/* RIGHT SIDE */}
 
-        <div
-          className="
+          <div
+            className="
         flex-1
         flex
         justify-center
         "
-        >
-          <div
-            className="
+          >
+            <div
+              className="
           w-full
           max-w-[300px]
           h-[320px]
@@ -237,12 +238,11 @@ const SaleBanner = () => {
           justify-center
           group
           "
-          >
-            <img
-              src={Burger}
-              alt="shoe"
-              className="
-              
+            >
+              <img
+                src={Burger}
+                alt="Signature Burger"
+                className="
               w-full
               h-full
               object-cover
@@ -250,12 +250,12 @@ const SaleBanner = () => {
               duration-500
               group-hover:scale-110
               "
-            />
+              />
 
-            {/* PRODUCT CARD */}
+              {/* PRODUCT CARD */}
 
-            <div
-              className="
+              <div
+                className="
             absolute
             bottom-6
             left-5
@@ -267,26 +267,27 @@ const SaleBanner = () => {
             text-white
             w-48
             "
-            >
-              <p
-                className="
+              >
+                <p
+                  className="
               text-sm
               text-gray-300
               mb-1
               "
-              >
-                Our Signature
-              </p>
+                >
+                  Our Signature
+                </p>
 
-              <h4
-                className="
+                <h4
+                  className="
               text-xl
               font-bold
               font-serif
               "
-              >
-                $149
-              </h4>
+                >
+                  $149
+                </h4>
+              </div>
             </div>
           </div>
         </div>

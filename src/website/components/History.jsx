@@ -23,27 +23,29 @@ const timeline = [
 
 const Timeline = () => {
   return (
-    <section className="bg-[#faf5ef] py-10 px-5">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <section className="bg-[#faf5ef] py-14 sm:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Heading */}
-        <div className="text-center mb-20">
-          <p className="text-[#e94f37] text-1xl mb-2">Our Journey</p>
+        <div className="text-center mb-16 md:mb-20">
+          <p className="text-[#e94f37] text-sm sm:text-base mb-2">
+            Our Journey
+          </p>
 
-          <h2 className="text-3xl font-bold font-playfair text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-bold font-playfair text-gray-900">
             A History of
             <span className="text-[#e94f37]"> Restaurant</span>
           </h2>
 
           <div className="w-16 h-1 bg-[#f7a321] rounded-full mx-auto mt-2"></div>
 
-          <p className="text-gray-500 max-w-xl mx-auto mt-4 text-md leading-7">
+          <p className="text-gray-500 max-w-xl mx-auto mt-4 text-sm sm:text-base leading-7">
             From humble beginnings to the city's most beloved restaurant — every
             chapter written with passion.
           </p>
         </div>
 
         {/* Timeline */}
-        <div className="relative text-center mt-[-50px]">
+        <div className="relative text-center md:mt-[-50px]">
           {/* Center Line */}
           <div className="hidden md:block absolute left-1/2 top-0 mt-[-25px]  h-full w-[2px] -translate-x-1/2 bg-[#e94f37]"></div>
 
@@ -51,7 +53,7 @@ const Timeline = () => {
             {timeline.map((item, index) => (
               <div
                 key={index}
-                className="relative grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-[-40px]"
+                className="relative grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-6 md:mt-[-40px]"
               >
                 {/* Content */}
                 <div

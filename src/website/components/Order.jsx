@@ -26,7 +26,7 @@ const schedule = [
 
 export default function OpeningHours() {
   return (
-    <section className="relative py-12 overflow-hidden bg-[#195a43]">
+    <section className="relative py-10 sm:py-12 lg:py-16 overflow-hidden bg-[#195a43]">
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-10"
@@ -36,10 +36,12 @@ export default function OpeningHours() {
         }}
       ></div>
 
-      <div className="relative max-w-7xl mx-auto px-5">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-5">
-          <p className="text-white text-1xl font-play">Opening Hours</p>
+          <p className="text-white text-sm sm:text-base font-play">
+            Opening Hours
+          </p>
 
           <h2 className="text-2xl md:text-4xl font-semibold font-playfair text-white mt-2">
             We're Open For You
@@ -49,14 +51,14 @@ export default function OpeningHours() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Opening Hours Card */}
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+          <div className="bg-white/10  backdrop-blur-sm border border-white/20 rounded-2xl p-6">
             <div className="space-y-5">
               {schedule.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between border-b border-white/10 pb-3 last:border-none"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-0  border-b border-white/10 pb-3 last:border-none"
                 >
                   <div className="flex items-center gap-3">
                     <FaClock className="text-orange-400 text-sm" />
@@ -64,7 +66,9 @@ export default function OpeningHours() {
                     <span className="text-gray-200 text-sm">{item.day}</span>
                   </div>
 
-                  <span className={`text-sm font-semibold ${item.color}`}>
+                  <span
+                    className={`text-sm font-semibold ${item.color}  sm:text-right`}
+                  >
                     {item.time}
                   </span>
                 </div>
@@ -73,7 +77,7 @@ export default function OpeningHours() {
           </div>
 
           {/* Order Online Card */}
-          <div className="bg-[#ef4423] rounded-2xl text-center p-8 shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div className="bg-[#ef4423] rounded-2xl text-center p-8 shadow-2xl hover:-translate-y-2 transition-all duration-300 ">
             <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mx-auto">
               <FaMotorcycle className="text-white text-2xl" />
             </div>
@@ -92,33 +96,35 @@ export default function OpeningHours() {
           {/* Contact Card */}
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
             <div className="space-y-6">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-3">
+                <div className="flex items-center gap-3 flex-shrink-0">
                   <FaMapMarkerAlt className="text-orange-400" />
                   <span className="text-white">Find Us</span>
                 </div>
 
-                <span className="text-gray-300 text-sm">
+                <span className="text-gray-300 text-sm text-right">
                   47 Flavor Street, NY
                 </span>
               </div>
 
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-3">
+                <div className="flex items-center gap-3 flex-shrink-0">
                   <FaPhoneAlt className="text-orange-400" />
                   <span className="text-white">Phone</span>
                 </div>
 
-                <span className="text-gray-300 text-sm">+1 (999) 123-4567</span>
+                <span className="text-gray-300 text-sm text-right">
+                  +1 (999) 123-4567
+                </span>
               </div>
 
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-3">
+                <div className="flex items-center gap-3 flex-shrink-0">
                   <FaEnvelope className="text-orange-400" />
                   <span className="text-white">Email</span>
                 </div>
 
-                <span className="text-gray-300 text-sm">
+                <span className="text-gray-300 text-sm text-right">
                   hello@sarabfood.com
                 </span>
               </div>

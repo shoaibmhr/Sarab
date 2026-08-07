@@ -34,12 +34,14 @@ const chefs = [
 
 export default function Team() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-14 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Heading */}
 
         <div className="text-center mb-14">
-          <p className="text-[#ef4423] font-play text-1xl">The Culinary Team</p>
+          <p className="text-[#ef4423] font-play text-sm sm:text-base">
+            The Culinary Team
+          </p>
 
           <h2 className="text-2xl lg:text-4xl font-playfair font-bold font-serif mt-2">
             Meet Our Expert <span className="text-[#ef4423]">Chef</span>
@@ -60,11 +62,11 @@ export default function Team() {
                 <img
                   src={chef.image}
                   alt={chef.name}
-                  className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-60 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/40 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                   <div className="flex gap-4">
                     {/* Instagram */}
                     <a
@@ -94,7 +96,7 @@ export default function Team() {
               </div>
 
               <div className="text-center py-5 px-3">
-                <h3 className="text-1xl font-bold text-gray-800">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800">
                   {chef.name}
                 </h3>
 

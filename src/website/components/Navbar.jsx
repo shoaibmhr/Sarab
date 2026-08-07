@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white text-2xl">
+            <div className="w-8 h-8 rounded-full bg-linear-to-r from-orange-500 to-red-600 flex items-center justify-center text-white text-2xl">
               <FaUtensils size={15} />
             </div>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-6 lg:gap-10 font-bold text-xs text-gray-700">
+          <ul className="hidden lg:flex items-center gap-6 lg:gap-10 font-bold text-xs text-gray-700">
             {navLinks.map((item) => (
               <li key={item.id} className="relative group cursor-pointer">
                 <a
@@ -65,7 +65,7 @@ const Navbar = () => {
           </ul>
 
           {/* Right (Desktop Button Fixed) */}
-          <div className="hidden md:flex items-center gap-4 lg:gap-6">
+          <div className="hidden lg:flex items-center gap-4 lg:gap-6">
             <button onClick={() => setIsSearchOpen(true)} className="p-2">
               <Search className="cursor-pointer hover:text-red-600" size={15} />
             </button>
@@ -82,7 +82,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Button */}
-          <button onClick={() => setOpen(!open)} className="md:hidden">
+          <button onClick={() => setOpen(!open)} className="lg:hidden">
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -118,7 +118,7 @@ const Navbar = () => {
 
               <Link
                 to="/checkout"
-                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2 font-semibold shadow-lg hover:opacity-90 transition-all duration-300 w-full sm:w-auto text-center"
+                className="bg-linear-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2 font-semibold shadow-lg hover:opacity-90 transition-all duration-300 w-full sm:w-auto text-center"
               >
                 <ShoppingBag size={18} />
                 <span>Order Now</span>

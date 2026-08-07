@@ -57,9 +57,7 @@ const Category = () => {
         {/* Heading */}
 
         <div className="text-center">
-          <h4 className="text-[#ef4423] tect-center font-play text-1xl ">
-            What We Offer
-          </h4>
+          <h4 className="text-[#ef4423]  font-play text-xl ">What We Offer</h4>
 
           <h2 className="mt-3 text-2xl font-playfair md:text-4xl font-black leading-tight">
             Browse by <span className="text-[#ef4423]">Category</span>
@@ -79,7 +77,7 @@ const Category = () => {
           {categories.map((category) => (
             <div
               key={category.id}
-              className={`group bg-white rounded-3xl p-6 text-center shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-2xl ${
+              className={`group bg-white relative overflow-hidden rounded-3xl p-4 sm:p-5 lg:p-6 text-center shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-2xl ${
                 category.active
                   ? "border-2 border-[#ef4423]"
                   : "border-2 border-transparent hover:border-[#ef4423]"
@@ -92,14 +90,14 @@ const Category = () => {
                   <img
                     src={category.image}
                     alt={category.title}
-                    className="w-auto h-auto object-cover group-hover:scale-110 transition duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                   />
                 </div>
               </div>
 
               {/* Title */}
 
-              <h3 className="mt-6 text-md font-bold text-gray-800">
+              <h3 className="mt-4 sm:mt-4 lg:mt-5text-base font-bold text-gray-800">
                 {category.title}
               </h3>
 
@@ -108,7 +106,7 @@ const Category = () => {
               <p className="mt-2 text-xs text-gray-400">{category.items}</p>
               {/* Decorative Background */}
 
-              <div className="absolute left-0 top-20 w-50 h-50 bg-orange-100 rounded-full blur-3xl opacity-40 -z-10"></div>
+              <div className="absolute pointer-events-none left-0 top-20 w-50 h-50 bg-orange-100 rounded-full blur-3xl opacity-40 -z-10"></div>
 
               <div className="absolute right-0 bottom-10 w-80 h-80 bg-red-100 rounded-full blur-3xl opacity-30 -z-10"></div>
             </div>

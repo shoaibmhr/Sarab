@@ -121,13 +121,13 @@ const Menu = () => {
 
           {/* Category Buttons */}
 
-          <div className="flex flex-wrap justify-center px-3 py-2 gap-3 mt-3">
+          <div className="grid grid-cols-3 sm:flex sm:flex-wrap sm:justify-center px-3 py-2 gap-3 mt-3">
             {categories.map((item) => (
               <button
                 key={item}
                 onClick={() => setActiveCategory(item)}
                 className={`
-                px-5 py-2 rounded-full border-light transition duration-300
+                px-5 py-2 rounded-full border border-gray-200 transition duration-300
                 ${
                   activeCategory === item
                     ? "bg-[#ef4423] text-white border-[#ef4423]"
@@ -167,7 +167,7 @@ const Menu = () => {
                   alt={food.title}
                   className="
                   w-full 
-                  h-50 
+                  h-[200px]
                   object-cover 
                   group-hover:scale-110 
                   transition 
@@ -239,7 +239,7 @@ const Menu = () => {
                 text-gray-500 
                 leading-5 
                 mt-1
-                font-xs
+                text-xs
                 "
                 >
                   Fresh ingredients, premium quality and unforgettable taste for

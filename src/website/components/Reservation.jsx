@@ -6,7 +6,7 @@ const Reservation = () => {
   return (
     <section
       id="reservation"
-      className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-14 sm:py-16 lg:py-20 px-5"
+      className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-14 sm:py-16 lg:py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Heading */}
@@ -134,7 +134,7 @@ const Reservation = () => {
                     <input
                       type="text"
                       placeholder="+1 (800) 000-0000"
-                      className="w-full rounded-lg border border-gray-200 px-4 py-3 resize-none outline-none transition-all duration-300 focus:border-[#d62828] focus:ring-4 focus:ring-red-100"
+                      className="w-full h-12 rounded-lg border border-gray-200 px-4  resize-none outline-none transition-all duration-300 focus:border-[#d62828] focus:ring-4 focus:ring-red-100"
                     />
                   </div>
                 </div>
@@ -215,7 +215,7 @@ const Reservation = () => {
                   <textarea
                     rows="4"
                     placeholder="Allergies, dietary needs, special occasions..."
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-red-500"
+                    className="w-full border border-gray-200 rounded-lg px-4 py-3 outline-none resize-none  transition-all duration-300 focus:border-[#d62828] focus:ring-4 focus:ring-red-100"
                   ></textarea>
                 </div>
 

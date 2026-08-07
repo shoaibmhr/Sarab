@@ -6,7 +6,7 @@ const Reservation = () => {
   return (
     <section
       id="contact"
-      className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-13 sm:py-16 lg:py-20 px-5"
+      className="w-full bg-gradient-to-b from-[#faf7f3] to-[#f4efe9] py-13 sm:py-16 lg:py-20 "
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Heading */}

@@ -8,31 +8,31 @@ const categories = [
   {
     title: "Gourmet Burger",
     image: banner,
-    height: "h-[500px]",
+    height: "h-[280px] md:h-[500px]",
     width: "w-full",
   },
   {
     title: "Pizza",
     image: pizza,
-    height: "h-[240px]", // Change as you like
+    height: "h-[200px] sm:h-[240px]",
     width: "w-full",
   },
   {
     title: "Burger",
     image: burger,
-    height: "h-[240px]", // Change as you like
+    height: "h-[200px] sm:h-[240px]",
     width: "w-full",
   },
   {
     title: "Wrap",
     image: wrap,
-    height: "h-[240px]", // Change as you like
+    height: "h-[200px] sm:h-[240px]",
     width: "w-full",
   },
   {
     title: "Desert",
     image: desert,
-    height: "h-[240px]", // Change as you like
+    height: "h-[200px] sm:h-[240px]",
     width: "w-full",
   },
 ];
@@ -52,14 +52,14 @@ const Card = ({ item }) => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
 
       {/* Content */}
-      <div className="absolute bottom-6 left-6 right-6 z-10 flex items-end justify-between">
+      <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 z-10 flex items-end justify-between">
         <div>
-          <h3 className="font-serif font-bold text-white text-2xl">
+          <h3 className="font-serif font-bold text-white text-lg sm:text-2xl">
             {item.title}
           </h3>
         </div>
 
-        <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xl transition-all duration-300 group-hover:bg-[#ef4423] group-hover:text-white group-hover:-translate-y-1">
+        <button className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-white flex items-center justify-center text-lg sm:text-xl transition-all duration-300 group-hover:bg-[#ef4423] group-hover:text-white group-hover:-translate-y-1">
           →
         </button>
       </div>
@@ -69,7 +69,7 @@ const Card = ({ item }) => {
 
 const Gallery = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-14 sm:py-16 lg:py-20">
       <p className="uppercase tracking-[4px] text-center text-[#ef4423] text-sm font-semibold">
         Curated World
       </p>
